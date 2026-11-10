@@ -1,25 +1,16 @@
 set -euo pipefail
-unset SDL_VIDEODRIVER || true
-unset SDL_AUDIODRIVER || true
+python - << 'EOF'
+import inspect
+import highway_env.envs.common.abstract as ab
+from sim.make_env import make_env
 
-rm -rf manish_autorunner/status/videos manish_autorunner/status/clips
-mkdir -p manish_autorunner/status/clips
-
-python -m eval.evaluate \
-  --agent random \
-  --episodes 3 \
-  --out results/video_smoke.csv \
-  --summary-out results/summary_video_smoke.csv \
-  --video-dir manish_autorunner/status/clips \
-  --video-episodes 2
-
-python -m eval.evaluate \
-  --agent idle \
-  --episodes 2 \
-  --out results/video_smoke.csv \
-  --append \
-  --summary-out results/summary_video_smoke.csv \
-  --video-dir manish_autorunner/status/clips \
-  --video-episodes 1
-
-ls -lh manish_autorunner/status/clips
+env = make_env(render_mode="rgb_array")
+print("metadata:", env.metadata)
+print("has set_record_video_wrapper:", hasattr(env.unwrapped, "set_record_video_wrapper"))
+print("AbstractEnv._simulate:")
+print(inspect.getsource(ab.AbstractEnv._simulate))
+if hasattr(ab.AbstractEnv, "set_record_video_wrapper"):
+    print("AbstractEnv.set_record_video_wrapper:")
+    print(inspect.getsource(ab.AbstractEnv.set_record_video_wrapper))
+env.close()
+EOF
