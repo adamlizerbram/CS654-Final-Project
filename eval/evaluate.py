@@ -229,6 +229,13 @@ def _wrap_video_env(
 
         env = _VerticalRenderWrapper(env)
 
+    class _SafeRecordVideo(RecordVideo):
+        def _capture_frame(self) -> None:
+            # highway-env's _automatic_rendering() calls _capture_frame() on sub-steps
+            # even during episodes where RecordVideo's trigger is False.
+            if self.recording:
+                super()._capture_frame()
+
     video_path = Path(video_dir)
     video_path.mkdir(parents=True, exist_ok=True)
     trigger = (
@@ -236,7 +243,7 @@ def _wrap_video_env(
         if video_episodes <= 0
         else (lambda ep_idx: ep_idx < video_episodes)
     )
-    wrapped = RecordVideo(
+    wrapped = _SafeRecordVideo(
         env,
         video_folder=str(video_path),
         name_prefix=prefix,

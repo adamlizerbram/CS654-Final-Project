@@ -1,4 +1,5 @@
 set -euo pipefail
+# smooth vertical clips v2
 unset SDL_VIDEODRIVER || true
 unset SDL_AUDIODRIVER || true
 
