@@ -1,6 +1,8 @@
 # Project Plan: DQN, Laya, and Laya-Shielded DQN in highway-env
 
-**Timeline:** Oct 8 – Dec 8, 2026 · **Experiment freeze:** Nov 20 · **Report and presentation:** Nov 21 – Dec 8
+**Timeline:** Nov 10 – Dec 8, 2026 (4 weeks) · **Experiment freeze:** Nov 29 · **Report and presentation:** Nov 30 – Dec 8
+
+Optional and *stretch* items start only if the Nov 18 checkpoint is met.
 
 **Conditions compared:**
 1. DQN alone
@@ -34,7 +36,7 @@ project/
 
 ---
 
-## Step 0: Shared conventions (Oct 8–9, whole group)
+## Step 0: Shared conventions (Nov 10–11, whole group)
 
 Agree on these before anyone writes code, so everyone can work in parallel:
 
@@ -46,7 +48,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ---
 
-## Step 1: Environment setup (Week 1: Oct 8–14)
+## Step 1: Environment setup (Nov 10–13)
 
 - [ ] Python 3.10+ (required by Laya)
 - [ ] Conda env from `environment.yml`: `conda env create -f environment.yml`
@@ -67,11 +69,11 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 - [ ] **`README.md`**: prerequisites, install commands, running the smoke test, expected output, common errors, local vs. cluster notes
 - [ ] Cluster access set up: https://sdsu-research-ci.github.io/instructionalcluster/architecture
 
-**Checkpoint:** the smoke test passes on all five machines.
+**Checkpoint (Fri Nov 13):** the smoke test passes on all five machines.
 
 ---
 
-## Step 2: Connect the models to the simulator (Week 2: Oct 15–21)
+## Step 2: Connect the models to the simulator (Nov 12–17)
 
 - [ ] **Laya agent:** describe the state as text, ask the action choice question, return the top action
 - [ ] **Laya shield:** score "unsafe" probabilities for DQN's ranked actions in one batched call; return the best safe action
@@ -79,7 +81,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ---
 
-## Step 3: Train DQN (Weeks 2–4: Oct 15 – Nov 4)
+## Step 3: Train DQN (Nov 12–22)
 
 - [ ] Start from the highway-env quickstart SB3 DQN example: https://highway-env.farama.org/quickstart
 - [ ] Train 3–5 seeds; save each model to `models/`; copy the models used in the report to `models/final/`
@@ -87,7 +89,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ---
 
-## Step 4: Fine-tune Laya (Weeks 2–4: Oct 15 – Nov 4)
+## Step 4: Fine-tune Laya (Nov 12–22)
 
 - [ ] Generate data with `make_laya_dataset.py`, running several copies in parallel with different `--seed-offset` values
 - [ ] Separate train and eval files with non-overlapping seeds
@@ -96,21 +98,21 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 - [ ] Compare accuracy and calibration, zero-shot vs. fine-tuned
 - [ ] Record the label settings (3 s horizon, 5 m safety gap) and don't tune them against test results
 
-**Checkpoint (end of week 3, Oct 28):** one DQN model and one Laya model each drive a full episode through the evaluation harness.
+**Checkpoint (Wed Nov 18):** one DQN model and one Laya model each drive a full episode through the evaluation harness.
 
 ---
 
-## Step 5: Combine them (Weeks 4–5: Oct 29 – Nov 11)
+## Step 5: Combine them (Nov 19–24)
 
 - [ ] Shield at test time: DQN proposes an action; Laya overrides it if P(unsafe) > threshold
 - [ ] Sweep the threshold (e.g. 0.3–0.9) to map the safety vs. speed trade-off
 - [ ] *Optional:* shield during training (works cleanly with DQN, which learns from the executed action)
 
-**Checkpoint (end of week 5, Nov 11):** the shield works and the threshold sweep is done.
+**Checkpoint (Tue Nov 24):** the shield works and the threshold sweep is done.
 
 ---
 
-## Step 6: Final evaluation (Week 6: Nov 12–18)
+## Step 6: Final evaluation (Nov 24–29)
 
 - [ ] Run every condition on the same evaluation seeds
 - [ ] *Optional:* lookahead oracle as an upper-bound reference
@@ -118,7 +120,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ---
 
-## Step 7: Analysis (Nov 12–20)
+## Step 7: Analysis (Nov 25–29)
 
 - [ ] Results table: mean ± confidence interval across seeds; save as `results/summary*.csv`
 - [ ] Crash rate vs. average speed plot, one point per method
@@ -126,22 +128,24 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 - [ ] Calibration (reliability) plot: zero-shot vs. fine-tuned Laya
 - [ ] Override rate: how often the shield changed DQN's action, and whether it prevented crashes
 
-**Experiment freeze: Nov 20.** No new runs after this date.
+**Experiment freeze: Nov 29.** No new runs after this date.
 
 ---
 
-## Step 8: Report and presentation (Nov 21 – Dec 8)
+## Step 8: Report and presentation (Nov 30 – Dec 8)
 
-- [ ] Draft report by Dec 1
-- [ ] Slides and rehearsal
-- [ ] Buffer for Thanksgiving (Nov 26–27)
-- [ ] Final submission: Dec 8
+- [ ] Setup and method sections drafted during Nov 17–24 (they don't need results)
+- [ ] Full draft report by Thu Dec 3
+- [ ] Slides by Sat Dec 5; rehearsal Mon Dec 7
+- [ ] Final submission: Tue Dec 8
+
+Thanksgiving (Nov 26–27): no deliverables due.
 
 ---
 
 ## Work split (5 people)
 
-| Person | Role | Weeks 1–2 (Oct 8–21) | Weeks 3–5 (Oct 22 – Nov 11) | Weeks 6–7 (Nov 12–20) | Report section |
+| Person | Role | Week 1 (Nov 10–16) | Weeks 2–3 (Nov 17–24) | Nov 24–29 | Report section |
 |---|---|---|---|---|---|
 | **A** | Infrastructure and evaluation | Repo, `.gitignore`, environment, `smoke_test.py`, README, cluster access | Evaluation harness, results CSV, batch job scripts | Run the final evaluation | Setup and methodology |
 | **B** | DQN | Run the SB3 quickstart; basic hyperparameter tuning | Train all seeds; *stretch:* Double/Dueling | Help integrate the shield with Q-values | DQN method and results |
@@ -150,8 +154,8 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 | **E** | Integration and analysis | Plotting scripts on fake CSV data; report outline | Shield logic and threshold sweep (with B and C) | Plots, demo videos | Combined approach and overall analysis |
 
 **Handoffs:**
-- **Week 2:** A's smoke test and evaluation harness → everyone
-- **Week 4:** B's trained DQN + C's shield wrapper + D's fine-tuned Laya → E's shield experiments
+- **Nov 13 / Nov 17:** A's smoke test / evaluation harness → everyone
+- **Nov 19:** B's trained DQN + C's shield wrapper + D's fine-tuned Laya → E's shield experiments
 
 **Whole group:** Step 0 conventions, weekly check-in, report review, presentation.
 
