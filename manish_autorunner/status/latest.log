@@ -1,1 +1,33 @@
-[2026-11-10T21:26:13Z] Starting job...
+--- _automatic_rendering ---
+    def _automatic_rendering(self) -> None:
+        """
+        Automatically render the intermediate frames while an action is still ongoing.
+
+        This allows to render the whole video and not only single steps corresponding to agent decision-making.
+        If a RecordVideo wrapper has been set, use it to capture intermediate frames.
+        """
+        if self.viewer is not None and self.enable_auto_render:
+            if self._record_video_wrapper:
+                self._record_video_wrapper._capture_frame()
+            else:
+                self.render()
+
+--- RecordVideo methods ---
+['_capture_frame', '_is_protocol', '_np_random', '_np_random_seed', 'action_space', 'class_name', 'close', 'get_wrapper_attr', 'has_wrapper_attr', 'metadata', 'np_random', 'np_random_seed', 'observation_space', 'render', 'render_mode', 'reset', 'set_wrapper_attr', 'spec', 'start_recording', 'step', 'stop_recording', 'unwrapped', 'wrapper_spec']
+    def step(
+        self, action: ActType
+    ) -> tuple[ObsType, SupportsFloat, bool, bool, dict[str, Any]]:
+        """Steps through the environment using action, recording observations if :attr:`self.recording`."""
+        obs, rew, terminated, truncated, info = self.env.step(action)
+        self.step_id += 1
+
+        if self.step_trigger and self.step_trigger(self.step_id):
+            self.start_recording(f"{self.name_prefix}-step-{self.step_id}")
+        if self.recording:
+            self._capture_frame()
+
+            if len(self.recorded_frames) > self.video_length:
+                self.stop_recording()
+
+        return obs, rew, terminated, truncated, info
+
