@@ -23,6 +23,7 @@ models/*
 data/
 results/*
 videos/
+logs/
 
 # Must stay after the *.pt/*.pth rules to re-include final weights
 !models/final/

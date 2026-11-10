@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.11
   - pip
+  - ipykernel  # lets JupyterLab list this env as a kernel
   - pip:
       - highway-env==1.12.1
       - gymnasium==1.4.0
