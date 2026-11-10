@@ -66,7 +66,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
   4. Laya loads and answers one question about a described highway state
   5. GPU detection (CUDA / MPS / CPU fallback)
   6. Prints `ALL CHECKS PASSED`, or names the failed check
-- [x] **`README.md`**: prerequisites, install commands, running the smoke test, common errors; same commands locally and on the cluster; env in `./.conda`
+- [x] **`README.md`**: prerequisites, install commands, running the smoke test, common errors; same commands locally and on the cluster; env in `./.conda/cs654`
 - [ ] Cluster access set up: https://sdsu-research-ci.github.io/instructionalcluster/architecture
 
 **Checkpoint (Fri Nov 13):** the smoke test passes on all five machines.
