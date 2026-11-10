@@ -21,11 +21,9 @@ import json
 import random
 from pathlib import Path
 
-import gymnasium as gym
-import highway_env  # noqa: F401
-
 from laya_tools.highway_to_laya import (ACTIONS, available_actions, action_choice_question,
                              describe_state, describe_with_action, safety_question)
+from sim.make_env import make_env
 
 NAME_TO_ID = {v: k for k, v in ACTIONS.items()}
 HORIZON = 3          # lookahead steps (1 step = 1 s at the default policy_frequency)
@@ -59,7 +57,6 @@ def simulate(env, action_name):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--env", default="highway-fast-v0")
     p.add_argument("--episodes", type=int, default=300)
     p.add_argument("--out", default="train.jsonl")
     p.add_argument("--seed-offset", type=int, default=0)
@@ -67,7 +64,7 @@ def main():
                    help="probability of a random action when driving the data-collection car")
     args = p.parse_args()
 
-    env = gym.make(args.env)
+    env = make_env()
     rng = random.Random(args.seed_offset)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     n_rows = n_unsafe = 0

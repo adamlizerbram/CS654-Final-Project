@@ -12,9 +12,8 @@ def check_imports():
 
 
 def check_highway():
-    import gymnasium as gym
-    import highway_env  # noqa: F401
-    env = gym.make("highway-fast-v0")
+    from sim.make_env import make_env
+    env = make_env()
     env.reset(seed=0)
     for _ in range(20):
         _, _, terminated, truncated, _ = env.step(env.action_space.sample())
@@ -24,20 +23,18 @@ def check_highway():
 
 
 def check_dqn():
-    import gymnasium as gym
-    import highway_env  # noqa: F401
     from stable_baselines3 import DQN
-    env = gym.make("highway-fast-v0")
+    from sim.make_env import make_env
+    env = make_env()
     DQN("MlpPolicy", env, learning_starts=200, verbose=0).learn(1_000)
     env.close()
 
 
 def check_laya():
-    import gymnasium as gym
-    import highway_env  # noqa: F401
     import laya
     from laya_tools.highway_to_laya import describe_with_action, safety_question
-    env = gym.make("highway-v0")
+    from sim.make_env import make_env
+    env = make_env()
     env.reset(seed=0)
     for _ in range(5):
         env.step(1)

@@ -106,10 +106,9 @@ def describe_with_action(env, action_name):
 
 
 if __name__ == "__main__":
-    import gymnasium as gym
-    import highway_env  # noqa: F401  (registers the environments)
+    from sim.make_env import make_env
 
-    env = gym.make("highway-v0")
+    env = make_env()
     env.reset(seed=0)
     for _ in range(5):
         env.step(1)  # IDLE a few steps so traffic spreads out

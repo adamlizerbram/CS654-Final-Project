@@ -1,0 +1,6 @@
+# Ranges never overlap, so no method is evaluated on a scene it trained on.
+dqn_train: [0, 1, 2, 3, 4]
+laya_train_offset: 0        # make_laya_dataset --seed-offset; episodes use offset..offset+N-1
+laya_val_offset: 10000
+eval_start: 100000
+eval_episodes: 100

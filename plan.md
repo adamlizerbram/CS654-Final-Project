@@ -40,11 +40,11 @@ project/
 
 Agree on these before anyone writes code, so everyone can work in parallel:
 
-- [ ] **Environment config** (`configs/env.yaml`): lanes, traffic density, episode length. Every method uses it.
-- [ ] **Agent interface:** `agent.act(env, obs) -> action` for DQN, Laya, and the shield.
-- [ ] **Text format for Laya:** `laya_tools/highway_to_laya.py` (already written).
-- [ ] **Results CSV columns:** `method, seed, episode, crashed, avg_speed, distance, reward`
-- [ ] **Seeds:** fixed lists for training and evaluation. Evaluation seeds are never used for training.
+- [ ] **Environment config** (`configs/env.yaml`, drafted): `highway-fast-v0` defaults pinned. Every method gets its env from `sim.make_env.make_env()`.
+- [ ] **Agent interface** (`agents/base.py`, drafted): `agent.act(env, obs) -> int` for DQN, Laya, and the shield.
+- [x] **Text format for Laya:** `laya_tools/highway_to_laya.py`
+- [ ] **Results CSV columns** (`eval/results_schema.py`, drafted): `method, model_seed, env_seed, crashed, steps, avg_speed, distance, reward, threshold, overrides`
+- [ ] **Seeds** (`configs/seeds.yaml`, drafted): DQN 0–4, Laya train data from 0, Laya validation from 10000, evaluation 100000–100099. Ranges never overlap.
 
 ---
 
@@ -58,7 +58,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
   - Stable-Baselines3 DQN: https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html
   - Laya (install, API, `laya-train`): https://github.com/NandhaKishorM/laya
   - Laya weights: `convaiinnovations/laya` on Hugging Face
-- [ ] Train on `highway-fast-v0` (faster, slightly less accurate); evaluate on `highway-v0`. Same for every method.
+- [x] Train and evaluate every method on `highway-fast-v0`: about 11× faster than `highway-v0`, with similar baseline crash rates (random policy 90% vs. 92%). Note its coarser 5 Hz physics in the report's limitations.
 - [x] **`smoke_test.py`** checks, in order:
   1. All packages import; versions print
   2. highway-env resets and runs 20 random steps
