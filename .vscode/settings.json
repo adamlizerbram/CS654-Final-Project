@@ -1,0 +1,17 @@
+{
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/__pycache__/**": true,
+        "**/*checkpoint*/**": true
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/*checkpoint*": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "trailing-spaces.trimOnSave": true,
+}

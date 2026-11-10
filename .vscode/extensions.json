@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "Anthropic.claude-code",
+        "GitHub.copilot-chat",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-python-envs",
+        "openai.chatgpt",
+        "PKief.material-icon-theme",
+        "shardulm94.trailing-spaces",
+    ]
+}
