@@ -205,6 +205,57 @@ def run_episode(
     }
 
 
+def _wrap_video_env(
+    env: Any,
+    *,
+    video_dir: str | Path,
+    prefix: str,
+    video_episodes: int,
+    video_vertical: bool,
+    quiet: bool,
+) -> Any:
+    import gymnasium as gym
+    import numpy as np
+    from gymnasium.wrappers import RecordVideo
+
+    if video_vertical:
+        class _VerticalRenderWrapper(gym.Wrapper):
+            def render(self) -> Any:
+                frame = super().render()
+                if frame is None:
+                    return None
+                # Rotate 90 deg CCW so cars travel bottom-to-top in portrait orientation.
+                return np.ascontiguousarray(np.rot90(frame, k=1))
+
+        env = _VerticalRenderWrapper(env)
+
+    class _SafeRecordVideo(RecordVideo):
+        def _capture_frame(self) -> None:
+            # highway-env's _automatic_rendering() calls _capture_frame() on sub-steps
+            # even during episodes where RecordVideo's trigger is False.
+            if self.recording:
+                super()._capture_frame()
+
+    video_path = Path(video_dir)
+    video_path.mkdir(parents=True, exist_ok=True)
+    trigger = (
+        (lambda ep_idx: True)
+        if video_episodes <= 0
+        else (lambda ep_idx: ep_idx < video_episodes)
+    )
+    wrapped = _SafeRecordVideo(
+        env,
+        video_folder=str(video_path),
+        name_prefix=prefix,
+        episode_trigger=trigger,
+        disable_logger=quiet,
+    )
+    unwrapped = getattr(wrapped, "unwrapped", None)
+    if unwrapped is not None and hasattr(unwrapped, "set_record_video_wrapper"):
+        unwrapped.set_record_video_wrapper(wrapped)
+    return wrapped
+
+
 def evaluate_agent(
     agent: Any,
     *,
@@ -215,6 +266,7 @@ def evaluate_agent(
     env_factory: Callable[..., Any] | None = None,
     video_dir: str | Path | None = None,
     video_episodes: int = 1,
+    video_vertical: bool = False,
     quiet: bool = False,
 ) -> list[dict[str, Any]]:
     """Evaluate an agent over a sequence of environment seeds."""
@@ -233,25 +285,17 @@ def evaluate_agent(
 
     method_label = method or getattr(agent, "name", type(agent).__name__)
     if video_dir is not None:
-        from gymnasium.wrappers import RecordVideo
-
-        video_path = Path(video_dir)
-        video_path.mkdir(parents=True, exist_ok=True)
         seed_tag = f"_seed{model_seed}" if model_seed is not None else ""
         thr_val = getattr(agent, "threshold", None)
         thr_tag = f"_thr{thr_val:g}" if thr_val is not None else ""
         prefix = f"{method_label}{seed_tag}{thr_tag}"
-        trigger = (
-            (lambda ep_idx: True)
-            if video_episodes <= 0
-            else (lambda ep_idx: ep_idx < video_episodes)
-        )
-        env = RecordVideo(
+        env = _wrap_video_env(
             env,
-            video_folder=str(video_path),
-            name_prefix=prefix,
-            episode_trigger=trigger,
-            disable_logger=quiet,
+            video_dir=video_dir,
+            prefix=prefix,
+            video_episodes=video_episodes,
+            video_vertical=video_vertical,
+            quiet=quiet,
         )
 
     rows: list[dict[str, Any]] = []
@@ -382,6 +426,11 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Number of episodes to record when --video-dir is set (0 = all).",
     )
     parser.add_argument(
+        "--video-vertical",
+        action="store_true",
+        help="Rotate recorded video frames 90 deg CCW so cars drive bottom-to-top.",
+    )
+    parser.add_argument(
         "--summary-out",
         default=None,
         help="Optional path to also write aggregated summary CSV.",
@@ -425,6 +474,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         episodes=args.episodes,
         video_dir=args.video_dir,
         video_episodes=args.video_episodes,
+        video_vertical=args.video_vertical,
         quiet=args.quiet,
     )
     out_path = write_results_csv(rows, args.out, append=args.append)
