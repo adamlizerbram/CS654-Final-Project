@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Conda (prefix envs created inside the repo); commit environment.yml instead
+.conda/
+
+# Secrets
+.env*
+!.env.example
+
+# Training outputs
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+runs/
+wandb/
+models/*
+data/
+results/*
+videos/
+
+# Must stay after the *.pt/*.pth rules to re-include final weights
+!models/final/
+!models/final/**
+!results/summary*.csv
+
+# OS
+.DS_Store
