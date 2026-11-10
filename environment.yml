@@ -1,0 +1,14 @@
+name: cs654
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - highway-env==1.12.1
+      - gymnasium==1.4.0
+      - stable-baselines3==2.9.2
+      - laya==0.4.30
+      - pyyaml
+      - pandas
+      - matplotlib

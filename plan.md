@@ -50,23 +50,23 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ## Step 1: Environment setup (Nov 10–13)
 
-- [ ] Python 3.10+ (required by Laya)
-- [ ] Conda env from `environment.yml`: `conda env create -f environment.yml`
-- [ ] Install packages:
+- [x] Python 3.11 (Laya needs 3.10+; torch 2.15 needs 3.11+)
+- [x] Conda env from `environment.yml`: `conda env create -f environment.yml`
+- [x] Install packages (versions pinned in `environment.yml`):
   - highway-env: https://highway-env.farama.org/
   - Gymnasium: https://gymnasium.farama.org/
   - Stable-Baselines3 DQN: https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html
   - Laya (install, API, `laya-train`): https://github.com/NandhaKishorM/laya
   - Laya weights: `convaiinnovations/laya` on Hugging Face
 - [ ] Train on `highway-fast-v0` (faster, slightly less accurate); evaluate on `highway-v0`. Same for every method.
-- [ ] **`smoke_test.py`** checks, in order:
+- [x] **`smoke_test.py`** checks, in order:
   1. All packages import; versions print
   2. highway-env resets and runs 20 random steps
   3. SB3 DQN trains about 1,000 steps without errors
   4. Laya loads and answers one question about a described highway state
   5. GPU detection (CUDA / MPS / CPU fallback)
   6. Prints `ALL CHECKS PASSED`, or names the failed check
-- [ ] **`README.md`**: prerequisites, install commands, running the smoke test, expected output, common errors, local vs. cluster notes
+- [x] **`README.md`**: prerequisites, install commands, running the smoke test, expected output, common errors, local vs. cluster notes
 - [ ] Cluster access set up: https://sdsu-research-ci.github.io/instructionalcluster/architecture
 
 **Checkpoint (Fri Nov 13):** the smoke test passes on all five machines.
