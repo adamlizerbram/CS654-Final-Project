@@ -143,19 +143,26 @@ Thanksgiving (Nov 26–27): no deliverables due.
 
 ---
 
-## Work split (5 people)
+## Work split (5 autonomous tracks)
 
-| Person | Role | Week 1 (Nov 10–16) | Weeks 2–3 (Nov 17–24) | Nov 24–29 | Report section |
-|---|---|---|---|---|---|
-| **A** | Infrastructure and evaluation | Repo, `.gitignore`, environment, `smoke_test.py`, README, cluster access | Evaluation harness, results CSV, batch job scripts | Run the final evaluation | Setup and methodology |
-| **B** | DQN | Run the SB3 quickstart; basic hyperparameter tuning | Train all seeds; *stretch:* Double/Dueling | Help integrate the shield with Q-values | DQN method and results |
-| **C** | Laya agent | Install Laya; build the Laya agent; zero-shot tests | Laya shield wrapper (with E) | Zero-shot Laya results | Laya method |
-| **D** | Laya fine-tuning | Dataset generation pipeline; parallel data runs | Fine-tuning, calibration checks | Fine-tuned Laya accuracy and calibration results | Fine-tuning and calibration |
-| **E** | Integration and analysis | Plotting scripts on fake CSV data; report outline | Shield logic and threshold sweep (with B and C) | Plots, demo videos | Combined approach and overall analysis |
+To eliminate blockers and allow all five members to develop and test in parallel against shared interfaces (`agents/base.py`, `sim/make_env.py`, `eval/results_schema.py`, `configs/seeds.yaml`), the project is divided into five equal, autonomous tracks:
+
+| Track | Assignee | Scope | Week 1 (Nov 10–16) | Weeks 2–3 (Nov 17–24) | Nov 24–29 | Report section |
+|---|---|---|---|---|---|---|
+| **Track 1: Evaluation Harness, Benchmark Orchestration & Metrics** | **Manish Thapa** | Evaluation runner, benchmark orchestrator, schema enforcement, CI metrics & summary tables | Repo/env verification, `eval/results_schema.py`, mock/baseline agents, `eval/evaluate.py` | Benchmark orchestration (`eval/run_benchmark.py`, `configs/benchmark.yaml`), `eval/metrics.py`, video capture | Run unified final evaluation across all conditions and generate `results/summary*.csv` | Setup and methodology |
+| **Track 2: DQN Baseline & RL Policy** | **Placeholder 1** | SB3 DQN training pipeline, seed sweeps, `Agent` wrapper + Q-value ranking | Run SB3 quickstart on `highway-fast-v0`; hyperparameter tuning | Train seeds `0–4` (`models/final/dqn_seed*.zip`); expose ranked Q-values; *stretch:* Double/Dueling DQN | Finalize DQN baseline runs and support Q-value integration | DQN method and results |
+| **Track 3: Zero-Shot Laya Agent & Driving Prompts** | **Placeholder 2** | Zero-shot Laya policy wrapper and action-choice prompt tuning/validation | Install Laya; implement `Agent` wrapper over `laya_tools/highway_to_laya.py` | Zero-shot validation on `highway-fast-v0`; prompt consistency checks | Generate zero-shot Laya evaluation results | Laya method |
+| **Track 4: Laya Fine-Tuning & Calibration** | **Placeholder 3** | Dataset generation, `laya-train` fine-tuning, and probability calibration | Parallel data collection via `laya_tools/make_laya_dataset.py` (train offset `0`, val offset `10000`) | Run `laya-train --dry-run` and fine-tune (`models/final/laya-highway`); calibration checks | Compare zero-shot vs. fine-tuned accuracy and reliability plots | Fine-tuning and calibration |
+| **Track 5: Safety Shield Wrapper & Event Metrics** | **Placeholder 4** | Shield wrapper over DQN + Laya `P(unsafe)`, threshold sweep, event logging & plots | Plotting scripts on schema-compliant CSVs; report outline | Implement shield wrapper (`threshold`, `overrides` / `last_override` hooks); run `0.3–0.9` threshold sweep | Produce crash-vs-speed, threshold sweep, override-prevention plots & demo videos | Combined approach and overall analysis |
+
+**Autonomous track interface contracts (no cross-track blocking):**
+- Every policy or shield implements `agents.base.Agent` (`act(env, obs) -> int`, plus `name: str`).
+- Shielded agents optionally expose `reset()`, `threshold`, and `overrides` (or per-step `last_override`) so Track 1's harness records threshold sweep and override counts automatically.
+- Track 1 tests its harness and orchestrator using built-in/mock agents (`RandomAgent`, `IdleAgent`, `MockAgent`) independently of Tracks 2–5.
 
 **Handoffs:**
-- **Nov 13 / Nov 17:** A's smoke test / evaluation harness → everyone
-- **Nov 19:** B's trained DQN + C's shield wrapper + D's fine-tuned Laya → E's shield experiments
+- **Nov 13 / Nov 17:** Track 1's smoke test & evaluation harness (`eval/evaluate.py`, `eval/run_benchmark.py`) → all tracks
+- **Nov 19:** Track 2's trained DQN + Track 3/5's Laya & shield wrappers + Track 4's fine-tuned Laya → unified benchmark & threshold sweeps
 
 **Whole group:** Step 0 conventions, weekly check-in, report review, presentation.
 
