@@ -1,10 +1,10 @@
 {
-  "status": "idle",
-  "job_hash": "866d756c8503d5c3b1130542168c6e23a4829a7c185f45ce463145e27f48105a",
-  "started_at": "2026-11-10T21:13:17Z",
-  "updated_at": "2026-11-10T21:13:17Z",
-  "exit_code": 0,
+  "status": "running",
+  "job_hash": "475f18c475b85bdc8413d55676f94e4093e7f8801141e58cccf94e7f277e70ed",
+  "started_at": "2026-11-10T21:19:19Z",
+  "updated_at": "2026-11-10T21:19:19Z",
+  "exit_code": null,
   "gpu": "NVIDIA A100 80GB PCIe",
   "host": "jupyter-mthapa2955-sdsu-edu---c3678e4b",
-  "command_preview": "# IDLE"
+  "command_preview": "set -euo pipefail"
 }
