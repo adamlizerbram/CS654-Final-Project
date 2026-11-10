@@ -1,12 +1,27 @@
 set -euo pipefail
-python - << 'EOF'
-import inspect
-import highway_env.envs.common.abstract as ab
-from gymnasium.wrappers import RecordVideo
+unset SDL_VIDEODRIVER || true
+unset SDL_AUDIODRIVER || true
 
-print("--- _automatic_rendering ---")
-print(inspect.getsource(ab.AbstractEnv._automatic_rendering))
-print("--- RecordVideo methods ---")
-print([m for m in dir(RecordVideo) if not m.startswith("__")])
-print(inspect.getsource(RecordVideo.step))
-EOF
+rm -rf manish_autorunner/status/clips
+mkdir -p manish_autorunner/status/clips
+
+python -m eval.evaluate \
+  --agent random \
+  --episodes 3 \
+  --out results/video_smoke.csv \
+  --summary-out results/summary_video_smoke.csv \
+  --video-dir manish_autorunner/status/clips \
+  --video-episodes 2 \
+  --video-vertical
+
+python -m eval.evaluate \
+  --agent idle \
+  --episodes 2 \
+  --out results/video_smoke.csv \
+  --append \
+  --summary-out results/summary_video_smoke.csv \
+  --video-dir manish_autorunner/status/clips \
+  --video-episodes 1 \
+  --video-vertical
+
+ls -lh manish_autorunner/status/clips
