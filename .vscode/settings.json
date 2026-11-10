@@ -3,14 +3,24 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.watcherExclude": {
-        "**/.venv/**": true,
+        "**/.conda/**": true,
         "**/__pycache__/**": true,
-        "**/*checkpoint*/**": true
+        "**/models/**": true,
+        "**/data/**": true,
+        "**/results/**": true,
+        "**/videos/**": true,
+        "**/wandb/**": true,
+        "**/runs/**": true
     },
     "search.exclude": {
-        "**/.venv": true,
+        "**/.conda": true,
         "**/__pycache__": true,
-        "**/*checkpoint*": true
+        "**/models": true,
+        "**/data": true,
+        "**/results": true,
+        "**/videos": true,
+        "**/wandb": true,
+        "**/runs": true
     },
     "workbench.iconTheme": "material-icon-theme",
     "trailing-spaces.trimOnSave": true,
