@@ -24,4 +24,5 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "trailing-spaces.trimOnSave": true,
+    "python.terminal.useEnvFile": true,
 }

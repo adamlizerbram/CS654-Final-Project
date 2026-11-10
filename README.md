@@ -33,6 +33,18 @@ Run these from the repo root:
    ```
    The first run downloads the Laya weights. It should end with `ALL CHECKS PASSED`; otherwise it prints `FAILED: <checks>` with a traceback.
 
+### Tokens (optional)
+
+`HF_TOKEN` avoids Hugging Face rate limits; `GH_TOKEN` lets git push and pull over HTTPS without a password prompt (useful on the cluster).
+
+```bash
+cp .env.example .env            # then fill in the tokens
+set -a; source .env; set +a     # load them; do this in every new terminal
+git config --global credential.https://github.com.helper '!f() { echo username=x-access-token; echo "password=$GH_TOKEN"; }; f'   # once per machine
+```
+
+### Updating the env
+
 After someone changes `environment.yml`, update your env:
 ```bash
 conda env update -f environment.yml -p ./.conda/cs654 --prune
@@ -48,8 +60,8 @@ conda env update -f environment.yml -p ./.conda/cs654 --prune
   ```
 - `ModuleNotFoundError: laya_tools` or `sim`: run from the repo root, and run scripts as modules (`python -m laya_tools.make_laya_dataset`).
 - `ModuleNotFoundError` for `highway_env`, `laya`, etc.: the env isn't active; run `conda activate ./.conda/cs654`.
-- Laya download fails or is rate-limited: run `huggingface-cli login`, or set `HF_TOKEN`.
-- Lots of warnings during the Laya check: harmless if the check ends with `ok`.
+- `You are sending unauthenticated requests to the HF Hub`, or the Laya download fails: set `HF_TOKEN` (see [Tokens](#tokens-optional)).
+- `laya: this checkpoint ships invalid temperatures ... choice:11+`: harmless. It only affects choice questions with 11 or more options; ours have at most 5.
 
 ## Outputs
 
