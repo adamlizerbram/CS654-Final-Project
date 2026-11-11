@@ -1,0 +1,65 @@
+# Benchmark matrix for Track 1 orchestration (python -m eval.run_benchmark).
+# Paths and agent_spec entries for Tracks 2-5 can be adjusted as each track merges.
+
+eval:
+  raw_out: results/raw_episodes.csv
+  summary_out: results/summary.csv
+  episodes: 100  # uses eval_start..eval_start+episodes-1 from configs/seeds.yaml
+
+shield_thresholds: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+dqn_seeds: [0, 1, 2, 3, 4]
+
+conditions:
+  - method: random
+    enabled: true
+    agent_spec: random
+    kwargs:
+      seed: 0
+
+  - method: dqn
+    enabled: true
+    agent_spec: agents.dqn_agent:DQNAgent
+    model_seeds: [0, 1, 2, 3, 4]
+    requires_paths:
+      - "models/final/dqn_seed{model_seed}.zip"
+    kwargs:
+      model_path: "models/final/dqn_seed{model_seed}.zip"
+
+  - method: laya_zeroshot
+    enabled: true
+    agent_spec: agents.laya_agent:LayaAgent
+    kwargs:
+      model_name: "convaiinnovations/laya"
+
+  - method: laya_finetuned
+    enabled: true
+    agent_spec: agents.laya_agent:LayaAgent
+    requires_paths:
+      - "models/final/laya-highway"
+    kwargs:
+      model_name: "models/final/laya-highway"
+
+  - method: shield_zeroshot
+    enabled: true
+    agent_spec: agents.laya_shield:LayaShieldAgent
+    model_seeds: [0, 1, 2, 3, 4]
+    thresholds: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    requires_paths:
+      - "models/final/dqn_seed{model_seed}.zip"
+    kwargs:
+      dqn_path: "models/final/dqn_seed{model_seed}.zip"
+      laya_model: "convaiinnovations/laya"
+      threshold: "{threshold}"
+
+  - method: shield_finetuned
+    enabled: true
+    agent_spec: agents.laya_shield:LayaShieldAgent
+    model_seeds: [0, 1, 2, 3, 4]
+    thresholds: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    requires_paths:
+      - "models/final/dqn_seed{model_seed}.zip"
+      - "models/final/laya-highway"
+    kwargs:
+      dqn_path: "models/final/dqn_seed{model_seed}.zip"
+      laya_model: "models/final/laya-highway"
+      threshold: "{threshold}"
