@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from laya_tools.finetune_laya import check_seed_ranges, merge_shards, shard_plan
+from laya_tools.finetune_laya import check_seed_ranges, drop_overlap, merge_shards, shard_plan
 
 SEEDS = {"laya_train_offset": 0, "laya_val_offset": 10000, "eval_start": 100000}
 SHIELD = {"state": "s", "questions": {"unsafe": {"type": "noul"}}, "expected": {"unsafe": True}}
@@ -56,6 +56,17 @@ class MergeShardsTest(unittest.TestCase):
     def test_filters_by_task(self):
         self.assertEqual(self._merge("shield"), [SHIELD, SHIELD])
         self.assertEqual(self._merge("policy"), [POLICY])
+
+
+class DropOverlapTest(unittest.TestCase):
+    def test_drops_only_val_rows_seen_in_train(self):
+        other = dict(SHIELD, state="t")
+        with tempfile.TemporaryDirectory() as d:
+            train, val = Path(d) / "train.jsonl", Path(d) / "val.jsonl"
+            train.write_text(json.dumps(SHIELD) + "\n")
+            val.write_text("".join(json.dumps(r) + "\n" for r in [SHIELD, other, POLICY]))
+            self.assertEqual(drop_overlap(train, val), 1)
+            self.assertEqual([json.loads(l) for l in val.read_text().splitlines()], [other, POLICY])
 
 
 if __name__ == "__main__":

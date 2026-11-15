@@ -59,6 +59,28 @@ def merge_shards(shards: list[Path], out: Path, task: str) -> int:
     return n
 
 
+def row_key(row: dict) -> tuple[str, str]:
+    return row["state"], json.dumps(row["questions"], sort_keys=True)
+
+
+def read_jsonl(path: Path) -> list[dict]:
+    with path.open(encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def held_out(train: Path, val: Path) -> list[dict]:
+    """Val rows whose input (state + question) never appears in train."""
+    seen = {row_key(r) for r in read_jsonl(train)}
+    return [r for r in read_jsonl(val) if row_key(r) not in seen]
+
+
+def drop_overlap(train: Path, val: Path) -> int:
+    rows = held_out(train, val)
+    n_dropped = len(read_jsonl(val)) - len(rows)
+    val.write_text("".join(json.dumps(r) + "\n" for r in rows), encoding="utf-8")
+    return n_dropped
+
+
 def collect(split: str, episodes: int, seed_offset: int, workers: int, data_dir: Path, task: str) -> Path:
     shard_dir = data_dir / "shards"
     shard_dir.mkdir(parents=True, exist_ok=True)
@@ -120,6 +142,7 @@ def main(argv: list[str] | None = None) -> int:
         check_seed_ranges(args.train_episodes, args.val_episodes, seeds)
         train = collect("train", args.train_episodes, seeds["laya_train_offset"], args.workers, args.data_dir, args.task)
         val = collect("val", args.val_episodes, seeds["laya_val_offset"], args.workers, args.data_dir, args.task)
+        print(f"[val] dropped {drop_overlap(train, val)} rows whose input also appears in train")
 
     from laya.train_cli import main as laya_train
 
