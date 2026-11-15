@@ -18,6 +18,7 @@ CSV_PATH = REPO_ROOT / "results" / "summary_calibration.csv"
 PNG_PATH = REPO_ROOT / "figures" / "reliability.png"
 COLUMNS = ["model", "kind", "bin_lo", "bin_hi", "n", "mean_pred", "observed", "gap"]
 N_BINS = 10
+MIN_PLOT_N = 20  # sparser bins stay in the CSV but are too noisy to draw
 KINDS = {
     "p_unsafe": ("Shield: P(unsafe)", "Predicted P(unsafe)", "Fraction actually unsafe"),
     "choice_top1": ("Action choice: top-1", "Top-1 confidence", "Accuracy"),
@@ -94,7 +95,10 @@ def plot(csv_path: Path = CSV_PATH, out: Path = PNG_PATH) -> Path:
             rows = [r for r in table if r["kind"] == kind and r["model"] == model]
             if not rows:
                 continue
-            top.plot([float(r["mean_pred"]) for r in rows], [float(r["observed"]) for r in rows],
+            by_bin = {round(float(r["bin_lo"]) * N_BINS): r for r in rows if int(r["n"]) >= MIN_PLOT_N}
+            nan = float("nan")  # breaks the line where a bin is skipped
+            top.plot([float(by_bin[b]["mean_pred"]) if b in by_bin else nan for b in range(N_BINS)],
+                     [float(by_bin[b]["observed"]) if b in by_bin else nan for b in range(N_BINS)],
                      color=color, marker=marker, markersize=6, linewidth=2, label=model)
             centers = [(float(r["bin_lo"]) + float(r["bin_hi"])) / 2 for r in rows]
             offset = (i - 0.5) * width
@@ -115,7 +119,8 @@ def plot(csv_path: Path = CSV_PATH, out: Path = PNG_PATH) -> Path:
             for side in ("left", "bottom"):
                 ax.spines[side].set_color("#c3c2b7")
     axes[0, 0].legend(frameon=False, fontsize=9, loc="upper left")
-    fig.text(0.5, 0.005, "Below the diagonal: predicted above observed (overstated risk / overconfident). Bottom: rows per bin.",
+    fig.text(0.5, 0.005, f"Below the diagonal: predicted above observed (overstated risk / overconfident). "
+             f"Bins with < {MIN_PLOT_N} rows not drawn. Bottom: rows per bin.",
              ha="center", fontsize=9, color="#52514e")
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=200, bbox_inches="tight", facecolor=fig.get_facecolor())
