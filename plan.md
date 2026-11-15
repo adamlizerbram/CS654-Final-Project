@@ -32,7 +32,9 @@ project/
 **Git-ignored** (large or easy to regenerate; share via the cluster or a shared drive):
 `.conda/`, `models/`, `data/`, `results/`, `videos/`, `checkpoints/`, `runs/`, `wandb/`, `*.pt`, `*.pth`, `*.ckpt`
 
-**Committed exceptions:** final weights in `models/final/` and summary tables matching `results/summary*.csv`, so graders can reproduce the report without retraining.
+**Committed exception:** summary tables matching `results/summary*.csv`, so graders can rebuild the figures without rerunning.
+
+**Fine-tuned Laya weights** live on Hugging Face in `laya-highway/` of [adamlizerbram/cs654-final-project](https://huggingface.co/adamlizerbram/cs654-final-project), not in git. To fetch them: `hf download adamlizerbram/cs654-final-project --include "laya-highway/*" --local-dir models/final`.
 
 ---
 
