@@ -93,12 +93,12 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 
 ## Step 4: Fine-tune Laya (Nov 12–22)
 
-- [ ] Generate data with `make_laya_dataset.py`, running several copies in parallel with different `--seed-offset` values
-- [ ] Separate train and eval files with non-overlapping seeds
-- [ ] `laya-train --dry-run` to check the data (no model loaded)
-- [ ] Train and calibrate: `laya-train --data train.jsonl --eval-data eval.jsonl --base convaiinnovations/laya --out ./laya-highway --shuffle-options`
-- [ ] Compare accuracy and calibration, zero-shot vs. fine-tuned
-- [ ] Record the label settings (3 s horizon, 5 m safety gap) and don't tune them against test results
+- [x] Generate data with `make_laya_dataset.py`, running several copies in parallel with different `--seed-offset` values
+- [x] Separate train and eval files with non-overlapping seeds
+- [x] `laya-train --dry-run` to check the data (no model loaded)
+- [x] Train and calibrate: `laya-train --data train.jsonl --eval-data eval.jsonl --base convaiinnovations/laya --out ./laya-highway --shuffle-options`
+- [x] Compare accuracy and calibration, zero-shot vs. fine-tuned
+- [x] Record the label settings (3 s horizon, 5 m safety gap) and don't tune them against test results
 
 **Checkpoint (Wed Nov 18):** one DQN model and one Laya model each drive a full episode through the evaluation harness.
 
@@ -127,7 +127,7 @@ Agree on these before anyone writes code, so everyone can work in parallel:
 - [ ] Results table: mean ± confidence interval across seeds; save as `results/summary*.csv`
 - [ ] Crash rate vs. average speed plot, one point per method
 - [ ] Shield threshold sweep curve
-- [ ] Calibration (reliability) plot: zero-shot vs. fine-tuned Laya
+- [x] Calibration (reliability) plot: zero-shot vs. fine-tuned Laya
 - [ ] Override rate: how often the shield changed DQN's action, and whether it prevented crashes
 
 **Experiment freeze: Nov 29.** No new runs after this date.
