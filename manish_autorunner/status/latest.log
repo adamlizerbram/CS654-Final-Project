@@ -1,131 +1,3 @@
-|    time_elapsed     | 404      |
-|    total_timesteps  | 13308    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0284   |
-|    n_updates        | 13107    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 23.4     |
-|    ep_rew_mean      | 18.5     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 750      |
-|    fps              | 32       |
-|    time_elapsed     | 408      |
-|    total_timesteps  | 13375    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.156    |
-|    n_updates        | 13174    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 26.9     |
-|    ep_rew_mean      | 20.8     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 700      |
-|    fps              | 32       |
-|    time_elapsed     | 418      |
-|    total_timesteps  | 13594    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0189   |
-|    n_updates        | 13393    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 25.4     |
-|    ep_rew_mean      | 19.8     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 750      |
-|    fps              | 33       |
-|    time_elapsed     | 419      |
-|    total_timesteps  | 13906    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.305    |
-|    n_updates        | 13705    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 23.3     |
-|    ep_rew_mean      | 18.4     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 700      |
-|    fps              | 33       |
-|    time_elapsed     | 437      |
-|    total_timesteps  | 14436    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.126    |
-|    n_updates        | 14235    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 23.8     |
-|    ep_rew_mean      | 19.1     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 800      |
-|    fps              | 32       |
-|    time_elapsed     | 443      |
-|    total_timesteps  | 14524    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0656   |
-|    n_updates        | 14323    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 26.4     |
-|    ep_rew_mean      | 20.7     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 750      |
-|    fps              | 32       |
-|    time_elapsed     | 445      |
-|    total_timesteps  | 14650    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.1      |
-|    n_updates        | 14449    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 25.9     |
-|    ep_rew_mean      | 20.2     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 800      |
-|    fps              | 33       |
-|    time_elapsed     | 458      |
-|    total_timesteps  | 15212    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0216   |
-|    n_updates        | 15011    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 27.4     |
-|    ep_rew_mean      | 21.3     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 750      |
-|    fps              | 32       |
-|    time_elapsed     | 460      |
-|    total_timesteps  | 14974    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0229   |
-|    n_updates        | 14773    |
-----------------------------------
-----------------------------------
 | rollout/            |          |
 |    ep_len_mean      | 24       |
 |    ep_rew_mean      | 18.9     |
@@ -398,3 +270,131 @@ Trained 20,000 steps in 605.5s. Saved models/final/dqn_seed2.zip
 |    n_updates        | 19783    |
 ----------------------------------
 Trained 20,000 steps in 608.3s. Saved models/final/dqn_seed3.zip
+Trained 20,000 steps in 610.6s. Saved models/final/dqn_seed4.zip
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 22.9     |
+|    ep_rew_mean      | 18.3     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 950      |
+|    fps              | 32       |
+|    time_elapsed     | 612      |
+|    total_timesteps  | 19905    |
+| train/              |          |
+|    learning_rate    | 0.0005   |
+|    loss             | 0.0996   |
+|    n_updates        | 19704    |
+----------------------------------
+Trained 20,000 steps in 615.0s. Saved models/final/dqn_seed1.zip
+[1/78] READY | method=random model_seed=None threshold=None spec=random
+[2/78] READY | method=dqn model_seed=0 threshold=None spec=agents.dqn_agent:DQNAgent
+[3/78] READY | method=dqn model_seed=1 threshold=None spec=agents.dqn_agent:DQNAgent
+[4/78] READY | method=dqn model_seed=2 threshold=None spec=agents.dqn_agent:DQNAgent
+[5/78] READY | method=dqn model_seed=3 threshold=None spec=agents.dqn_agent:DQNAgent
+[6/78] READY | method=dqn model_seed=4 threshold=None spec=agents.dqn_agent:DQNAgent
+[7/78] READY | method=laya_zeroshot model_seed=None threshold=None spec=agents.laya_agent:LayaAgent
+[8/78] READY | method=laya_finetuned model_seed=None threshold=None spec=agents.laya_agent:LayaAgent
+[9/78] READY | method=shield_zeroshot model_seed=0 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[10/78] READY | method=shield_zeroshot model_seed=0 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[11/78] READY | method=shield_zeroshot model_seed=0 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[12/78] READY | method=shield_zeroshot model_seed=0 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[13/78] READY | method=shield_zeroshot model_seed=0 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[14/78] READY | method=shield_zeroshot model_seed=0 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[15/78] READY | method=shield_zeroshot model_seed=0 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[16/78] READY | method=shield_zeroshot model_seed=1 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[17/78] READY | method=shield_zeroshot model_seed=1 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[18/78] READY | method=shield_zeroshot model_seed=1 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[19/78] READY | method=shield_zeroshot model_seed=1 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[20/78] READY | method=shield_zeroshot model_seed=1 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[21/78] READY | method=shield_zeroshot model_seed=1 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[22/78] READY | method=shield_zeroshot model_seed=1 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[23/78] READY | method=shield_zeroshot model_seed=2 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[24/78] READY | method=shield_zeroshot model_seed=2 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[25/78] READY | method=shield_zeroshot model_seed=2 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[26/78] READY | method=shield_zeroshot model_seed=2 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[27/78] READY | method=shield_zeroshot model_seed=2 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[28/78] READY | method=shield_zeroshot model_seed=2 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[29/78] READY | method=shield_zeroshot model_seed=2 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[30/78] READY | method=shield_zeroshot model_seed=3 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[31/78] READY | method=shield_zeroshot model_seed=3 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[32/78] READY | method=shield_zeroshot model_seed=3 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[33/78] READY | method=shield_zeroshot model_seed=3 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[34/78] READY | method=shield_zeroshot model_seed=3 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[35/78] READY | method=shield_zeroshot model_seed=3 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[36/78] READY | method=shield_zeroshot model_seed=3 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[37/78] READY | method=shield_zeroshot model_seed=4 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[38/78] READY | method=shield_zeroshot model_seed=4 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[39/78] READY | method=shield_zeroshot model_seed=4 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[40/78] READY | method=shield_zeroshot model_seed=4 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[41/78] READY | method=shield_zeroshot model_seed=4 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[42/78] READY | method=shield_zeroshot model_seed=4 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[43/78] READY | method=shield_zeroshot model_seed=4 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[44/78] READY | method=shield_finetuned model_seed=0 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[45/78] READY | method=shield_finetuned model_seed=0 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[46/78] READY | method=shield_finetuned model_seed=0 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[47/78] READY | method=shield_finetuned model_seed=0 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[48/78] READY | method=shield_finetuned model_seed=0 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[49/78] READY | method=shield_finetuned model_seed=0 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[50/78] READY | method=shield_finetuned model_seed=0 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[51/78] READY | method=shield_finetuned model_seed=1 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[52/78] READY | method=shield_finetuned model_seed=1 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[53/78] READY | method=shield_finetuned model_seed=1 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[54/78] READY | method=shield_finetuned model_seed=1 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[55/78] READY | method=shield_finetuned model_seed=1 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[56/78] READY | method=shield_finetuned model_seed=1 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[57/78] READY | method=shield_finetuned model_seed=1 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[58/78] READY | method=shield_finetuned model_seed=2 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[59/78] READY | method=shield_finetuned model_seed=2 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[60/78] READY | method=shield_finetuned model_seed=2 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[61/78] READY | method=shield_finetuned model_seed=2 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[62/78] READY | method=shield_finetuned model_seed=2 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[63/78] READY | method=shield_finetuned model_seed=2 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[64/78] READY | method=shield_finetuned model_seed=2 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[65/78] READY | method=shield_finetuned model_seed=3 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[66/78] READY | method=shield_finetuned model_seed=3 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[67/78] READY | method=shield_finetuned model_seed=3 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[68/78] READY | method=shield_finetuned model_seed=3 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[69/78] READY | method=shield_finetuned model_seed=3 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[70/78] READY | method=shield_finetuned model_seed=3 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[71/78] READY | method=shield_finetuned model_seed=3 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[72/78] READY | method=shield_finetuned model_seed=4 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
+[73/78] READY | method=shield_finetuned model_seed=4 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
+[74/78] READY | method=shield_finetuned model_seed=4 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
+[75/78] READY | method=shield_finetuned model_seed=4 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
+[76/78] READY | method=shield_finetuned model_seed=4 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
+[77/78] READY | method=shield_finetuned model_seed=4 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
+[78/78] READY | method=shield_finetuned model_seed=4 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
+[1/5] Running dqn (model_seed=0, threshold=None) for 100 episode(s)...
+[dqn] episode 1/100 seed=100000 crashed=0 steps=30 avg_speed=22.86 distance=687.3 reward=24.25
+[dqn] episode 2/100 seed=100001 crashed=1 steps=14 avg_speed=19.93 distance=288.3 reward=9.89
+[dqn] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=25.19 distance=753.9 reward=25.24
+[dqn] episode 4/100 seed=100003 crashed=1 steps=11 avg_speed=24.64 distance=279.4 reward=8.99
+[dqn] episode 5/100 seed=100004 crashed=0 steps=30 avg_speed=24.33 distance=727.3 reward=24.43
+[dqn] episode 6/100 seed=100005 crashed=0 steps=30 avg_speed=23.69 distance=713.0 reward=24.95
+[dqn] episode 7/100 seed=100006 crashed=1 steps=12 avg_speed=21.75 distance=269.4 reward=8.92
+[dqn] episode 8/100 seed=100007 crashed=1 steps=18 avg_speed=22.66 distance=415.0 reward=13.97
+[dqn] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=21.36 distance=643.0 reward=23.09
+[dqn] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=22.36 distance=670.8 reward=23.65
+[dqn] episode 11/100 seed=100010 crashed=0 steps=30 avg_speed=27.00 distance=808.0 reward=26.70
+[dqn] episode 12/100 seed=100011 crashed=0 steps=30 avg_speed=24.19 distance=727.3 reward=25.32
+[dqn] episode 13/100 seed=100012 crashed=1 steps=9 avg_speed=22.06 distance=205.5 reward=6.35
+[dqn] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=21.19 distance=636.6 reward=22.75
+[dqn] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=22.19 distance=667.2 reward=23.72
+[dqn] episode 16/100 seed=100015 crashed=0 steps=30 avg_speed=25.03 distance=749.5 reward=25.22
+[dqn] episode 17/100 seed=100016 crashed=1 steps=21 avg_speed=22.90 distance=489.3 reward=16.02
+[dqn] episode 18/100 seed=100017 crashed=1 steps=12 avg_speed=23.90 distance=292.3 reward=9.49
+[dqn] episode 19/100 seed=100018 crashed=1 steps=6 avg_speed=27.50 distance=164.8 reward=4.93
+[dqn] episode 20/100 seed=100019 crashed=0 steps=30 avg_speed=21.53 distance=648.0 reward=23.22
+[dqn] episode 21/100 seed=100020 crashed=1 steps=11 avg_speed=22.34 distance=247.7 reward=8.09
+[dqn] episode 22/100 seed=100021 crashed=0 steps=30 avg_speed=21.86 distance=652.7 reward=21.95
+[dqn] episode 23/100 seed=100022 crashed=1 steps=17 avg_speed=27.99 distance=477.9 reward=15.42
+[dqn] episode 24/100 seed=100023 crashed=0 steps=30 avg_speed=23.03 distance=692.7 reward=24.42
+[dqn] episode 25/100 seed=100024 crashed=0 steps=30 avg_speed=22.69 distance=683.0 reward=24.15
+[dqn] episode 26/100 seed=100025 crashed=0 steps=30 avg_speed=22.03 distance=662.7 reward=23.62
+[dqn] episode 27/100 seed=100026 crashed=0 steps=30 avg_speed=22.36 distance=671.3 reward=23.32
+[dqn] episode 28/100 seed=100027 crashed=1 steps=12 avg_speed=27.74 distance=340.8 reward=10.73
+[dqn] episode 29/100 seed=100028 crashed=0 steps=30 avg_speed=20.69 distance=619.3 reward=22.02
+[dqn] episode 30/100 seed=100029 crashed=0 steps=30 avg_speed=23.69 distance=711.1 reward=24.58
+[dqn] episode 31/100 seed=100030 crashed=0 steps=30 avg_speed=22.17 distance=664.7 reward=23.73
+[dqn] episode 32/100 seed=100031 crashed=1 steps=20 avg_speed=25.70 distance=522.6 reward=16.69
