@@ -1,9 +1,9 @@
 {
-  "status": "done",
-  "job_hash": "cdb7b7cdfad4a0a6bd4feed32c3dafe93c99bd6db336edb7fa624590dca62092",
-  "started_at": "2026-11-16T06:37:19Z",
-  "updated_at": "2026-11-16T06:37:41Z",
-  "exit_code": 0,
+  "status": "running",
+  "job_hash": "78d0e21d2a4da49882439d7aa6bf18eb24e8de56fe1bc1b6ecb5ca4fc14abf78",
+  "started_at": "2026-11-16T06:52:39Z",
+  "updated_at": "2026-11-16T06:52:39Z",
+  "exit_code": null,
   "gpu": "NVIDIA A100 80GB PCIe",
   "host": "jupyter-brauniyar8173-sdsu-edu---91893d00",
   "command_preview": "set -euo pipefail"
