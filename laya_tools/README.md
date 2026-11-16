@@ -38,7 +38,7 @@ hf download adamlizerbram/cs654-final-project --include "laya-highway/*" --local
 
 ```bash
 python -m laya_tools.finetune_laya --dry-run          # data + laya-train --dry-run
-python -m laya_tools.finetune_laya --workers 16       # full run -> models/final/laya-highway
+python -m laya_tools.finetune_laya --workers 16       # full run -> models/final/laya-highway, results/summary_finetune*.csv
 python -m figures.calibration --compute               # GPU: reliability table -> results/summary_calibration.csv
 python -m figures.make_figures                        # all figures from committed CSVs
 ```

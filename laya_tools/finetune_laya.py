@@ -2,6 +2,8 @@
 
 One checkpoint serves both roles: shield rows (noul "unsafe") and policy rows (choice "action").
 laya-train writes train_report.json (before/after accuracy, ECE, Brier per question type) into --out.
+After training, this also writes results/summary_finetune.csv (from that report) and
+results/summary_finetune_loss.csv (parsed from laya-train's printed loss, kept as --out/train.log).
 
 Usage (from the repo root):
   python -m laya_tools.finetune_laya --dry-run
@@ -11,8 +13,12 @@ Usage (from the repo root):
 from __future__ import annotations
 
 import argparse
+import contextlib
+import csv
+import io
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -20,6 +26,12 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 QUESTION_KEY = {"shield": "unsafe", "policy": "action"}
+SUMMARY_CSV = REPO_ROOT / "results" / "summary_finetune.csv"
+SUMMARY_COLUMNS = ["model", "question", "items", "accuracy", "ece", "brier"]
+LOSS_CSV = REPO_ROOT / "results" / "summary_finetune_loss.csv"
+LOSS_COLUMNS = ["kind", "epoch", "step", "loss"]
+STEP_RE = re.compile(r"^epoch (\d+)/\d+ step (\d+) loss (\S+)$", re.M)
+EPOCH_RE = re.compile(r"^epoch (\d+)/\d+ mean loss (\S+)$", re.M)
 
 
 def shard_plan(episodes: int, seed_offset: int, workers: int) -> list[tuple[int, int]]:
@@ -79,6 +91,44 @@ def drop_overlap(train: Path, val: Path) -> int:
     n_dropped = len(read_jsonl(val)) - len(rows)
     val.write_text("".join(json.dumps(r) + "\n" for r in rows), encoding="utf-8")
     return n_dropped
+
+
+def summarize_report(report: Path, out: Path = SUMMARY_CSV) -> Path:
+    """Per-question zero-shot (before) vs fine-tuned (after) metrics from train_report.json."""
+    data = json.loads(report.read_text(encoding="utf-8"))
+    rows = [{"model": model, "question": q, **{k: data[phase]["by_type"][q][k] for k in SUMMARY_COLUMNS[2:]}}
+            for model, phase in (("zero-shot", "before"), ("fine-tuned", "after")) for q in ("noul", "choice")]
+    return write_csv(out, SUMMARY_COLUMNS, rows)
+
+
+def parse_loss(log: str) -> list[dict]:
+    """laya-train's printed loss: one micro-batch every log_every steps, plus each epoch's mean."""
+    rows = [{"kind": "step", "epoch": int(e), "step": int(s), "loss": float(v)} for e, s, v in STEP_RE.findall(log)]
+    rows += [{"kind": "epoch_mean", "epoch": int(e), "step": "", "loss": float(v)} for e, v in EPOCH_RE.findall(log)]
+    return rows
+
+
+def write_csv(out: Path, columns: list[str], rows: list[dict]) -> Path:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=columns)
+        writer.writeheader()
+        writer.writerows(rows)
+    return out
+
+
+class Tee(io.TextIOBase):
+    def __init__(self, *streams):
+        self.streams = streams
+
+    def write(self, s: str) -> int:
+        for stream in self.streams:
+            stream.write(s)
+        return len(s)
+
+    def flush(self) -> None:
+        for stream in self.streams:
+            stream.flush()
 
 
 def collect(split: str, episodes: int, seed_offset: int, workers: int, data_dir: Path, task: str) -> Path:
@@ -151,11 +201,20 @@ def main(argv: list[str] | None = None) -> int:
     if rc != 0 or args.dry_run:
         return rc
 
-    rc = laya_train([*common, "--out", args.out])
+    log = io.StringIO()
+    with contextlib.redirect_stdout(Tee(sys.stdout, log)):
+        rc = laya_train([*common, "--out", args.out])
     if rc == 0:
+        out = Path(args.out)
         # Per-epoch resume copy duplicates the final weights; drop it so models/final holds one checkpoint.
-        shutil.rmtree(Path(args.out) / "checkpoint_latest", ignore_errors=True)
-        print(f"Metrics: {Path(args.out) / 'train_report.json'}")
+        shutil.rmtree(out / "checkpoint_latest", ignore_errors=True)
+        (out / "train.log").write_text(log.getvalue(), encoding="utf-8")
+        print(f"Metrics: {out / 'train_report.json'}")
+        print(f"wrote {summarize_report(out / 'train_report.json')}")
+        loss = parse_loss(log.getvalue())
+        if not loss:
+            print(f"warning: no loss lines found in {out / 'train.log'}; laya-train's log format may have changed")
+        print(f"wrote {write_csv(LOSS_CSV, LOSS_COLUMNS, loss)}")
     return rc
 
 
