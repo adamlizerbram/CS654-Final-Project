@@ -1,1 +1,12 @@
-[2026-11-16T06:22:45Z] Starting job...
+Runner revision: 83f8122b392552e0decd506ba15a9343614ca029
+From github.com:adamlizerbram/CS654-Final-Project
+ * branch            feat/track5-safety-shield -> FETCH_HEAD
+Source revision: e60c15e3b320809936ed3a7080da5054b8427c2c
+REAL LAYA INFERENCE / MOCK DQN Q-VALUES — not synthetic Laya scores
+[zero-shot] loading checkpoint
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 5 files:  60%|██████    | 3/5 [00:00<00:00, 10.46it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.50it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.65it/s]
