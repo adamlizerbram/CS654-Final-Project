@@ -10,3 +10,13 @@ Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Warning: You are sending 
 Fetching 5 files:  60%|██████    | 3/5 [00:00<00:00, 10.46it/s]
 Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.50it/s]
 Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.65it/s]
+/home/jovyan/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/laya/agent.py:2259: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+[zero-shot] model loaded
+[zero-shot] real HighwayEnv state: Highway with 3 lanes, numbered 1 (leftmost) to 3 (rightmost). Ego car: lane 1, speed 25 m/s. Current lane: ahead: car 21 m away, 24 m/s, closing at 1 m/s (collision in 21.2 s if nothing changes); behind: clear. Left lane: does not exist. Right lane: ahead: car 70 m away, 24 m/s, closing at 1 m/s (collision in 58.6 s if nothing changes); behind: clear.
+[zero-shot] REAL LAYA SCORE action=1 (IDLE) unsafe=0.897600
+[zero-shot] REAL LAYA SCORE action=2 (LANE_RIGHT) unsafe=0.850800
+[zero-shot] shield.act succeeded; selected=4, override=False; DQN Q-values MOCK
+[fine-tuned] no local checkpoint directory found
+[fine-tuned] Hugging Face repository reachable; laya-highway files present=True; weights not downloaded
+RESULT zero-shot=PASS; fine-tuned=NOT RUN
