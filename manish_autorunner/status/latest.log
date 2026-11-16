@@ -1,43 +1,3 @@
-[dqn] episode 2/100 seed=100001 crashed=1 steps=7 avg_speed=25.54 distance=185.7 reward=5.20
-[dqn] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=25.53 distance=763.7 reward=25.18
-[dqn] episode 4/100 seed=100003 crashed=0 steps=30 avg_speed=23.00 distance=687.1 reward=23.60
-[dqn] episode 5/100 seed=100004 crashed=0 steps=30 avg_speed=23.53 distance=705.4 reward=23.72
-[dqn] episode 6/100 seed=100005 crashed=0 steps=30 avg_speed=24.03 distance=717.2 reward=24.65
-[dqn] episode 7/100 seed=100006 crashed=0 steps=30 avg_speed=22.19 distance=666.7 reward=22.92
-[dqn] episode 8/100 seed=100007 crashed=0 steps=30 avg_speed=24.19 distance=725.4 reward=24.75
-[dqn] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=24.00 distance=715.4 reward=24.09
-[dqn] episode 10/100 seed=100009 crashed=1 steps=11 avg_speed=24.25 distance=271.2 reward=8.43
-[dqn] episode 11/100 seed=100010 crashed=1 steps=22 avg_speed=26.20 distance=582.9 reward=18.06
-[dqn] episode 12/100 seed=100011 crashed=0 steps=30 avg_speed=22.53 distance=676.8 reward=22.32
-[dqn] episode 13/100 seed=100012 crashed=0 steps=30 avg_speed=21.69 distance=649.6 reward=22.05
-[dqn] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=20.36 distance=607.0 reward=21.85
-[dqn] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=24.53 distance=736.6 reward=24.82
-[dqn] episode 16/100 seed=100015 crashed=0 steps=30 avg_speed=25.03 distance=750.2 reward=25.08
-[dqn] episode 17/100 seed=100016 crashed=1 steps=16 avg_speed=25.00 distance=404.4 reward=12.13
-[dqn] episode 18/100 seed=100017 crashed=0 steps=30 avg_speed=23.64 distance=705.5 reward=24.11
-[dqn] episode 19/100 seed=100018 crashed=1 steps=9 avg_speed=23.98 distance=223.6 reward=7.02
-[dqn] episode 20/100 seed=100019 crashed=1 steps=28 avg_speed=23.52 distance=665.6 reward=21.35
-[dqn] episode 21/100 seed=100020 crashed=0 steps=30 avg_speed=25.33 distance=755.6 reward=25.19
-[dqn] episode 22/100 seed=100021 crashed=1 steps=25 avg_speed=25.11 distance=634.7 reward=19.86
-[dqn] episode 23/100 seed=100022 crashed=0 steps=30 avg_speed=24.98 distance=744.6 reward=25.45
-[dqn] episode 24/100 seed=100023 crashed=0 steps=30 avg_speed=22.69 distance=680.3 reward=23.98
-[dqn] episode 25/100 seed=100024 crashed=0 steps=30 avg_speed=23.48 distance=699.9 reward=24.28
-[dqn] episode 26/100 seed=100025 crashed=0 steps=30 avg_speed=22.52 distance=673.4 reward=23.55
-[dqn] episode 27/100 seed=100026 crashed=0 steps=30 avg_speed=22.19 distance=661.9 reward=22.75
-[dqn] episode 28/100 seed=100027 crashed=0 steps=30 avg_speed=23.86 distance=713.9 reward=23.82
-[dqn] episode 29/100 seed=100028 crashed=1 steps=19 avg_speed=21.24 distance=411.7 reward=13.45
-[dqn] episode 30/100 seed=100029 crashed=0 steps=30 avg_speed=21.86 distance=656.1 reward=21.92
-[dqn] episode 31/100 seed=100030 crashed=0 steps=30 avg_speed=21.69 distance=647.4 reward=23.05
-[dqn] episode 32/100 seed=100031 crashed=0 steps=30 avg_speed=26.03 distance=781.4 reward=25.42
-[dqn] episode 33/100 seed=100032 crashed=0 steps=30 avg_speed=24.50 distance=733.8 reward=25.03
-[dqn] episode 34/100 seed=100033 crashed=1 steps=16 avg_speed=23.66 distance=386.0 reward=12.42
-[dqn] episode 35/100 seed=100034 crashed=0 steps=30 avg_speed=23.52 distance=703.9 reward=24.25
-[dqn] episode 36/100 seed=100035 crashed=1 steps=18 avg_speed=22.42 distance=409.7 reward=13.65
-[dqn] episode 37/100 seed=100036 crashed=0 steps=30 avg_speed=21.50 distance=642.5 reward=21.47
-[dqn] episode 38/100 seed=100037 crashed=0 steps=30 avg_speed=24.53 distance=737.4 reward=25.59
-[dqn] episode 39/100 seed=100038 crashed=0 steps=30 avg_speed=24.33 distance=728.3 reward=24.23
-[dqn] episode 40/100 seed=100039 crashed=1 steps=5 avg_speed=25.75 distance=135.5 reward=3.80
-[dqn] episode 41/100 seed=100040 crashed=0 steps=30 avg_speed=23.69 distance=709.2 reward=24.69
 [dqn] episode 42/100 seed=100041 crashed=1 steps=20 avg_speed=22.23 distance=452.5 reward=14.13
 [dqn] episode 43/100 seed=100042 crashed=0 steps=30 avg_speed=21.84 distance=653.1 reward=23.30
 [dqn] episode 44/100 seed=100043 crashed=1 steps=14 avg_speed=23.27 distance=327.2 reward=9.92
@@ -398,3 +358,43 @@
 [dqn] episode 96/100 seed=100095 crashed=1 steps=8 avg_speed=27.23 distance=224.4 reward=6.40
 [dqn] episode 97/100 seed=100096 crashed=1 steps=9 avg_speed=25.03 distance=231.3 reward=6.93
 [dqn] episode 98/100 seed=100097 crashed=0 steps=30 avg_speed=21.19 distance=637.7 reward=22.92
+[dqn] episode 99/100 seed=100098 crashed=1 steps=21 avg_speed=28.17 distance=598.6 reward=18.54
+[dqn] episode 100/100 seed=100099 crashed=1 steps=12 avg_speed=29.04 distance=355.8 reward=11.05
+
+method             thr     ep seeds       crash_rate        avg_speed           reward    override_rate
+-------------------------------------------------------------------------------------------------------
+dqn                -      500     5    0.358 ± 0.281     24.08 ± 1.72     19.75 ± 2.68                -
+laya_finetuned     -      100     0    0.330 ± 0.093     25.53 ± 0.47     20.50 ± 1.51                -
+laya_zeroshot      -      100     0    1.000 ± 0.000     23.15 ± 0.21      4.09 ± 0.42                -
+random             -      100     0    0.990 ± 0.020     23.88 ± 0.42      7.70 ± 0.96                -
+
+Raw CSV: results/raw_episodes.csv
+Summary CSV: results/summary.csv
+/home/jovyan/RL/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/gymnasium/wrappers/rendering.py:298: UserWarning: [33mWARN: Overwriting existing videos at /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)[0m
+  logger.warn(
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+[dqn] episode 1/1 seed=100000 crashed=0 steps=30 avg_speed=22.86 distance=687.3 reward=24.25
+MoviePy - Building video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/dqn_seed0-episode-0.mp4.
+MoviePy - Writing video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/dqn_seed0-episode-0.mp4
+
+
+frame_index:   0%|          | 0/150 [00:00<?, ?it/s, now=None]
+frame_index:  12%|█▏        | 18/150 [00:00<00:00, 157.29it/s, now=None]
+                                                                        
+MoviePy - Done !
+MoviePy - video ready /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/dqn_seed0-episode-0.mp4
+Wrote 1 episode rows to results/demo_dqn.csv
+/home/jovyan/RL/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/gymnasium/wrappers/rendering.py:298: UserWarning: [33mWARN: Overwriting existing videos at /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)[0m
+  logger.warn(
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+[shield_finetuned] episode 1/1 seed=100000 crashed=0 steps=30 avg_speed=22.69 distance=682.0 reward=24.12
+MoviePy - Building video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/shield_finetuned_seed0_thr0.5-episode-0.mp4.
+MoviePy - Writing video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/shield_finetuned_seed0_thr0.5-episode-0.mp4
+
+
+frame_index:   0%|          | 0/150 [00:00<?, ?it/s, now=None]
+                                                              
+MoviePy - Done !
+MoviePy - video ready /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/shield_finetuned_seed0_thr0.5-episode-0.mp4
+Wrote 1 episode rows to results/demo_shield.csv
+[1/70] Running shield_zeroshot (model_seed=0, threshold=0.3) for 100 episode(s)...
