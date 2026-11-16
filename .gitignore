@@ -19,15 +19,13 @@ checkpoints/
 *.pth
 runs/
 wandb/
-models/*
+models/
 data/
 results/*
 videos/
 logs/
 
-# Must stay after the *.pt/*.pth rules to re-include final weights
-!models/final/
-!models/final/**
+# Summary tables are committed so graders can rebuild figures; weights live on Hugging Face
 !results/summary*.csv
 
 # OS
