@@ -1,0 +1,5 @@
+model,question,items,accuracy,ece,brier
+zero-shot,noul,2754,0.5029,0.3029,0.7296
+zero-shot,choice,697,0.1435,0.5857,1.233
+fine-tuned,noul,2754,0.947,0.0248,0.0967
+fine-tuned,choice,697,0.891,0.0484,0.1869

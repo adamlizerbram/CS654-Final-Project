@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from figures.calibration import compute, plot, reliability
+from figures.calibration import compute, plot_finetune, plot_reliability, reliability
 
 
 class ReliabilityTest(unittest.TestCase):
@@ -37,8 +37,14 @@ class PlotTest(unittest.TestCase):
                 compute({"zero-shot": "a", "fine-tuned": "b"}, train, val, out=csv_path)
             finally:
                 cal.score = original
-            self.assertGreater(plot(csv_path, png).stat().st_size, 0)
+            self.assertGreater(plot_reliability(csv_path, png).stat().st_size, 0)
 
+    def test_finetune_bars_from_csv(self):
+        with tempfile.TemporaryDirectory() as d:
+            csv_path = Path(d) / "f.csv"
+            csv_path.write_text("model,question,items,accuracy,ece,brier\n" + "".join(
+                f"{m},{q},5,0.5,0.1,0.2\n" for m in ("zero-shot", "fine-tuned") for q in ("noul", "choice")))
+            self.assertGreater(plot_finetune(csv_path, Path(d) / "b.png").stat().st_size, 0)
 
 if __name__ == "__main__":
     unittest.main()
