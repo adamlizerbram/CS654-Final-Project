@@ -1,1 +1,33 @@
-[2026-11-16T06:37:19Z] Starting job...
+Runner revision: 6c9417fda8637a9a958abfa92587719c3e489152
+From github.com:adamlizerbram/CS654-Final-Project
+ * branch            main       -> FETCH_HEAD
+   a28a2b9..38fefa4  main       -> origin/main
+Source revision: e60c15e3b320809936ed3a7080da5054b8427c2c
+Model source: adamlizerbram/cs654-final-project revision=8f150026ebd947d30db1afaf048fb832b3bfe330
+Model directory: /home/jovyan/CS654-Track5-Runner/models/final/laya-highway; free bytes=69333028864
+
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 7 files:  14%|█▍        | 1/7 [00:00<00:02,  2.59it/s]
+Fetching 7 files:  57%|█████▋    | 4/7 [00:00<00:00,  9.76it/s]
+Fetching 7 files:  86%|████████▌ | 6/7 [00:00<00:00,  7.46it/s]
+Fetching 7 files: 100%|██████████| 7/7 [00:06<00:00,  1.05it/s]
+Fine-tuned weights SHA-256 verified
+REAL LAYA SCORES; DQN Q-VALUES MOCK; seed=100000
+State: Highway with 3 lanes, numbered 1 (leftmost) to 3 (rightmost). Ego car: lane 1, speed 25 m/s. Current lane: ahead: car 21 m away, 24 m/s, closing at 1 m/s (collision in 21.2 s if nothing changes); behind: clear. Left lane: does not exist. Right lane: ahead: car 70 m away, 24 m/s, closing at 1 m/s (collision in 58.6 s if nothing changes); behind: clear.
+[zero-shot] loading source=convaiinnovations/laya
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1654.30it/s]
+/home/jovyan/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/laya/agent.py:2259: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+[zero-shot] loaded
+[zero-shot] action=1 (IDLE) unsafe=0.897600
+[zero-shot] action=2 (LANE_RIGHT) unsafe=0.850800
+[fine-tuned] loading source=/home/jovyan/CS654-Track5-Runner/models/final/laya-highway
+[fine-tuned] loaded
+[fine-tuned] action=1 (IDLE) unsafe=0.031400
+[fine-tuned] action=2 (LANE_RIGHT) unsafe=0.031200
+COMPARE IDLE zero-shot=0.897600 fine-tuned=0.031400
+COMPARE LANE_RIGHT zero-shot=0.850800 fine-tuned=0.031200
+RESULT both models loaded; four finite scores in [0, 1]
