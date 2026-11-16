@@ -203,3 +203,23 @@ Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.22it
 [3/3] Running laya_finetuned (model_seed=None, threshold=None) for 100 episode(s)...
 [laya_finetuned] episode 1/100 seed=100000 crashed=0 steps=30 avg_speed=24.86 distance=746.2 reward=24.15
 [laya_finetuned] episode 2/100 seed=100001 crashed=0 steps=30 avg_speed=24.69 distance=742.1 reward=25.48
+[laya_finetuned] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=27.97 distance=835.2 reward=26.88
+[laya_finetuned] episode 4/100 seed=100003 crashed=0 steps=30 avg_speed=22.52 distance=677.6 reward=22.92
+[laya_finetuned] episode 5/100 seed=100004 crashed=1 steps=26 avg_speed=24.15 distance=635.9 reward=20.53
+[laya_finetuned] episode 6/100 seed=100005 crashed=1 steps=29 avg_speed=25.38 distance=743.2 reward=24.10
+[laya_finetuned] episode 7/100 seed=100006 crashed=1 steps=21 avg_speed=23.33 distance=494.2 reward=16.22
+[laya_finetuned] episode 8/100 seed=100007 crashed=1 steps=29 avg_speed=24.77 distance=724.6 reward=22.68
+[laya_finetuned] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=26.86 distance=807.1 reward=26.75
+[laya_finetuned] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=26.36 distance=791.6 reward=25.75
+[laya_finetuned] episode 11/100 seed=100010 crashed=0 steps=30 avg_speed=29.14 distance=870.5 reward=28.01
+[laya_finetuned] episode 12/100 seed=100011 crashed=0 steps=30 avg_speed=26.36 distance=791.4 reward=26.32
+[laya_finetuned] episode 13/100 seed=100012 crashed=0 steps=30 avg_speed=25.69 distance=772.3 reward=24.85
+[laya_finetuned] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=29.14 distance=870.2 reward=28.14
+[laya_finetuned] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=25.19 distance=757.7 reward=24.39
+[laya_finetuned] episode 16/100 seed=100015 crashed=1 steps=6 avg_speed=23.04 distance=144.0 reward=3.97
+[laya_finetuned] episode 17/100 seed=100016 crashed=0 steps=30 avg_speed=22.50 distance=675.4 reward=22.00
+[laya_finetuned] episode 18/100 seed=100017 crashed=0 steps=30 avg_speed=29.14 distance=869.6 reward=28.28
+[laya_finetuned] episode 19/100 seed=100018 crashed=0 steps=30 avg_speed=21.17 distance=635.0 reward=22.60
+[laya_finetuned] episode 20/100 seed=100019 crashed=1 steps=14 avg_speed=27.57 distance=393.1 reward=12.10
+[laya_finetuned] episode 21/100 seed=100020 crashed=0 steps=30 avg_speed=24.98 distance=745.6 reward=24.28
+[laya_finetuned] episode 22/100 seed=100021 crashed=1 steps=15 avg_speed=24.07 distance=368.7 reward=11.10
