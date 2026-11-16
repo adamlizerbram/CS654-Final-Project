@@ -288,3 +288,39 @@ Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  9.22it
 [laya_finetuned] episode 85/100 seed=100084 crashed=0 steps=30 avg_speed=23.19 distance=697.4 reward=23.25
 [laya_finetuned] episode 86/100 seed=100085 crashed=0 steps=30 avg_speed=23.53 distance=707.1 reward=23.62
 [laya_finetuned] episode 87/100 seed=100086 crashed=0 steps=30 avg_speed=26.86 distance=807.4 reward=26.69
+[laya_finetuned] episode 88/100 seed=100087 crashed=0 steps=30 avg_speed=22.19 distance=667.6 reward=21.92
+[laya_finetuned] episode 89/100 seed=100088 crashed=0 steps=30 avg_speed=21.86 distance=658.0 reward=23.49
+[laya_finetuned] episode 90/100 seed=100089 crashed=0 steps=30 avg_speed=25.97 distance=776.4 reward=26.48
+[laya_finetuned] episode 91/100 seed=100090 crashed=0 steps=30 avg_speed=23.50 distance=704.8 reward=23.03
+[laya_finetuned] episode 92/100 seed=100091 crashed=0 steps=30 avg_speed=26.52 distance=797.0 reward=25.35
+[laya_finetuned] episode 93/100 seed=100092 crashed=0 steps=30 avg_speed=29.14 distance=871.7 reward=29.21
+[laya_finetuned] episode 94/100 seed=100093 crashed=0 steps=30 avg_speed=23.86 distance=717.4 reward=23.29
+[laya_finetuned] episode 95/100 seed=100094 crashed=1 steps=5 avg_speed=25.20 distance=133.4 reward=3.66
+[laya_finetuned] episode 96/100 seed=100095 crashed=0 steps=30 avg_speed=22.19 distance=667.3 reward=22.15
+[laya_finetuned] episode 97/100 seed=100096 crashed=1 steps=7 avg_speed=24.69 distance=182.0 reward=5.33
+[laya_finetuned] episode 98/100 seed=100097 crashed=1 steps=3 avg_speed=24.86 distance=82.9 reward=1.91
+[laya_finetuned] episode 99/100 seed=100098 crashed=0 steps=30 avg_speed=27.36 distance=821.2 reward=26.98
+[laya_finetuned] episode 100/100 seed=100099 crashed=0 steps=30 avg_speed=29.81 distance=890.9 reward=29.11
+
+method             thr     ep seeds       crash_rate        avg_speed           reward    override_rate
+-------------------------------------------------------------------------------------------------------
+laya_finetuned     -      100     0    0.330 ± 0.093     25.53 ± 0.47     20.50 ± 1.51                -
+laya_zeroshot      -      100     0    1.000 ± 0.000     23.15 ± 0.21      4.09 ± 0.42                -
+random             -      100     0    0.990 ± 0.020     23.88 ± 0.42      7.70 ± 0.96                -
+
+Raw CSV: results/raw_episodes.csv
+Summary CSV: results/summary.csv
+/home/jovyan/RL/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/gymnasium/wrappers/rendering.py:298: UserWarning: [33mWARN: Overwriting existing videos at /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)[0m
+  logger.warn(
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+[laya_finetuned] episode 1/1 seed=100000 crashed=0 steps=30 avg_speed=24.86 distance=746.2 reward=24.15
+MoviePy - Building video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/laya_finetuned-episode-0.mp4.
+MoviePy - Writing video /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/laya_finetuned-episode-0.mp4
+
+
+frame_index:   0%|          | 0/150 [00:00<?, ?it/s, now=None]
+frame_index:  61%|██████▏   | 92/150 [00:00<00:00, 915.21it/s, now=None]
+                                                                        
+MoviePy - Done !
+MoviePy - video ready /home/jovyan/RL/CS654-Final-Project/manish_autorunner/status/clips/laya_finetuned-episode-0.mp4
+Wrote 1 episode rows to results/laya_demo.csv
