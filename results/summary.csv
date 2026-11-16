@@ -1,0 +1,4 @@
+method,threshold,n_seeds,n_episodes,ci_basis,crash_rate_mean,crash_rate_ci95,avg_speed_mean,avg_speed_ci95,distance_mean,distance_ci95,reward_mean,reward_ci95,steps_mean,steps_ci95,override_rate_mean,override_rate_ci95,total_overrides
+laya_finetuned,,0,100,episodes,0.33,0.0926,25.5267,0.4726,626.6511,43.8467,20.4991,1.5056,24.66,1.738,,,
+laya_zeroshot,,0,100,episodes,1.0,0.0,23.1505,0.2067,144.5563,12.6081,4.0893,0.419,5.96,0.5121,,,
+random,,0,100,episodes,0.99,0.0196,23.8823,0.4196,249.0101,28.2684,7.698,0.9645,10.27,1.2088,,,
