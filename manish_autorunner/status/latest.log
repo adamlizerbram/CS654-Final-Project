@@ -1,55 +1,3 @@
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 900      |
-|    fps              | 32       |
-|    time_elapsed     | 566      |
-|    total_timesteps  | 18640    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0272   |
-|    n_updates        | 18439    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 24.8     |
-|    ep_rew_mean      | 19.5     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 950      |
-|    fps              | 33       |
-|    time_elapsed     | 573      |
-|    total_timesteps  | 19016    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0164   |
-|    n_updates        | 18815    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 23.9     |
-|    ep_rew_mean      | 18.9     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 900      |
-|    fps              | 32       |
-|    time_elapsed     | 576      |
-|    total_timesteps  | 18768    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.00982  |
-|    n_updates        | 18567    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 23.6     |
-|    ep_rew_mean      | 18.6     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 900      |
-|    fps              | 33       |
-|    time_elapsed     | 578      |
-|    total_timesteps  | 19101    |
-| train/              |          |
 |    learning_rate    | 0.0005   |
 |    loss             | 0.119    |
 |    n_updates        | 18900    |
@@ -398,3 +346,55 @@ Trained 20,000 steps in 615.0s. Saved models/final/dqn_seed1.zip
 [dqn] episode 11/100 seed=100010 crashed=0 steps=30 avg_speed=26.31 distance=785.6 reward=26.11
 [dqn] episode 12/100 seed=100011 crashed=1 steps=30 avg_speed=24.97 distance=745.6 reward=25.25
 [dqn] episode 13/100 seed=100012 crashed=1 steps=26 avg_speed=22.68 distance=596.8 reward=19.41
+[dqn] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=26.47 distance=789.0 reward=26.31
+[dqn] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=24.86 distance=747.4 reward=25.39
+[dqn] episode 16/100 seed=100015 crashed=0 steps=30 avg_speed=25.36 distance=760.2 reward=25.85
+[dqn] episode 17/100 seed=100016 crashed=1 steps=14 avg_speed=25.09 distance=360.2 reward=10.80
+[dqn] episode 18/100 seed=100017 crashed=0 steps=30 avg_speed=29.48 distance=878.8 reward=28.41
+[dqn] episode 19/100 seed=100018 crashed=1 steps=27 avg_speed=24.44 distance=657.7 reward=21.86
+[dqn] episode 20/100 seed=100019 crashed=0 steps=30 avg_speed=25.03 distance=751.5 reward=25.68
+[dqn] episode 21/100 seed=100020 crashed=0 steps=30 avg_speed=25.69 distance=771.3 reward=25.92
+[dqn] episode 22/100 seed=100021 crashed=0 steps=30 avg_speed=26.19 distance=785.6 reward=25.85
+[dqn] episode 23/100 seed=100022 crashed=1 steps=21 avg_speed=26.23 distance=553.0 reward=18.22
+[dqn] episode 24/100 seed=100023 crashed=1 steps=20 avg_speed=28.44 distance=574.8 reward=18.33
+[dqn] episode 25/100 seed=100024 crashed=1 steps=11 avg_speed=28.32 distance=319.7 reward=10.01
+[dqn] episode 26/100 seed=100025 crashed=1 steps=24 avg_speed=22.78 distance=552.5 reward=18.79
+[dqn] episode 27/100 seed=100026 crashed=0 steps=30 avg_speed=22.69 distance=681.6 reward=23.45
+[dqn] episode 28/100 seed=100027 crashed=1 steps=26 avg_speed=24.59 distance=635.2 reward=20.98
+[dqn] episode 29/100 seed=100028 crashed=1 steps=13 avg_speed=21.07 distance=283.5 reward=9.55
+[dqn] episode 30/100 seed=100029 crashed=1 steps=12 avg_speed=25.42 distance=308.0 reward=9.57
+[dqn] episode 31/100 seed=100030 crashed=0 steps=30 avg_speed=22.36 distance=672.7 reward=23.85
+[dqn] episode 32/100 seed=100031 crashed=1 steps=22 avg_speed=28.47 distance=633.7 reward=19.73
+[dqn] episode 33/100 seed=100032 crashed=1 steps=17 avg_speed=28.21 distance=484.2 reward=15.28
+[dqn] episode 34/100 seed=100033 crashed=0 steps=30 avg_speed=21.86 distance=658.0 reward=23.49
+[dqn] episode 35/100 seed=100034 crashed=1 steps=19 avg_speed=26.05 distance=496.8 reward=15.66
+[dqn] episode 36/100 seed=100035 crashed=1 steps=6 avg_speed=24.93 distance=157.5 reward=4.38
+[dqn] episode 37/100 seed=100036 crashed=0 steps=30 avg_speed=21.52 distance=646.7 reward=22.08
+[dqn] episode 38/100 seed=100037 crashed=0 steps=30 avg_speed=27.50 distance=824.1 reward=27.50
+[dqn] episode 39/100 seed=100038 crashed=0 steps=30 avg_speed=21.03 distance=632.6 reward=22.65
+[dqn] episode 40/100 seed=100039 crashed=0 steps=30 avg_speed=28.81 distance=858.0 reward=28.01
+[dqn] episode 41/100 seed=100040 crashed=1 steps=14 avg_speed=28.63 distance=406.3 reward=13.05
+[dqn] episode 42/100 seed=100041 crashed=0 steps=30 avg_speed=22.81 distance=681.4 reward=23.08
+[dqn] episode 43/100 seed=100042 crashed=0 steps=30 avg_speed=26.03 distance=782.4 reward=26.52
+[dqn] episode 44/100 seed=100043 crashed=1 steps=10 avg_speed=24.52 distance=253.1 reward=7.60
+[dqn] episode 45/100 seed=100044 crashed=1 steps=20 avg_speed=24.16 distance=485.4 reward=16.22
+[dqn] episode 46/100 seed=100045 crashed=0 steps=30 avg_speed=26.97 distance=803.9 reward=26.91
+[dqn] episode 47/100 seed=100046 crashed=1 steps=6 avg_speed=22.43 distance=140.4 reward=4.13
+[dqn] episode 48/100 seed=100047 crashed=1 steps=7 avg_speed=22.65 distance=166.6 reward=4.92
+[dqn] episode 49/100 seed=100048 crashed=0 steps=30 avg_speed=22.50 distance=675.1 reward=23.97
+[dqn] episode 50/100 seed=100049 crashed=1 steps=27 avg_speed=24.97 distance=670.1 reward=21.81
+[dqn] episode 51/100 seed=100050 crashed=0 steps=30 avg_speed=26.19 distance=787.4 reward=25.99
+[dqn] episode 52/100 seed=100051 crashed=0 steps=30 avg_speed=25.31 distance=756.3 reward=25.91
+[dqn] episode 53/100 seed=100052 crashed=1 steps=17 avg_speed=27.25 distance=468.7 reward=14.81
+[dqn] episode 54/100 seed=100053 crashed=1 steps=4 avg_speed=28.31 distance=116.7 reward=2.92
+[dqn] episode 55/100 seed=100054 crashed=0 steps=30 avg_speed=25.86 distance=775.9 reward=25.98
+[dqn] episode 56/100 seed=100055 crashed=1 steps=8 avg_speed=26.82 distance=222.2 reward=6.58
+[dqn] episode 57/100 seed=100056 crashed=0 steps=30 avg_speed=25.81 distance=770.5 reward=25.85
+[dqn] episode 58/100 seed=100057 crashed=0 steps=30 avg_speed=26.19 distance=787.1 reward=25.62
+[dqn] episode 59/100 seed=100058 crashed=1 steps=29 avg_speed=24.62 distance=722.6 reward=23.62
+[dqn] episode 60/100 seed=100059 crashed=1 steps=9 avg_speed=27.60 distance=255.1 reward=7.21
+[dqn] episode 61/100 seed=100060 crashed=1 steps=13 avg_speed=28.79 distance=371.3 reward=11.08
+[dqn] episode 62/100 seed=100061 crashed=1 steps=7 avg_speed=26.12 distance=191.6 reward=5.37
+[dqn] episode 63/100 seed=100062 crashed=1 steps=9 avg_speed=28.47 distance=261.2 reward=7.48
+[dqn] episode 64/100 seed=100063 crashed=1 steps=22 avg_speed=24.40 distance=541.1 reward=17.60
+[dqn] episode 65/100 seed=100064 crashed=0 steps=30 avg_speed=26.53 distance=795.4 reward=26.28
