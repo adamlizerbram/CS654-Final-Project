@@ -1,17 +1,1 @@
-Runner revision: f458388e37b0e9e988642108d783d7f5749c88a9
-From github.com:adamlizerbram/CS654-Final-Project
- * branch            feat/track5-safety-shield -> FETCH_HEAD
-   2ccd706..313a3c9  feat/track5-safety-shield -> origin/feat/track5-safety-shield
-Source revision: 313a3c9b443b57d8a387de07c55d2e491991a850
-Python: Python 3.11.18
-test_all_unsafe_lowest_risk_and_tie_rank (test_laya_shield.TestShield.test_all_unsafe_lowest_risk_and_tie_rank) ... ok
-test_evaluator_resets_and_records_overrides (test_laya_shield.TestShield.test_evaluator_resets_and_records_overrides) ... ok
-test_invalid_inputs (test_laya_shield.TestShield.test_invalid_inputs) ... ok
-test_legal_filter_and_ties (test_laya_shield.TestShield.test_legal_filter_and_ties) ... ok
-test_preferred_and_boundary (test_laya_shield.TestShield.test_preferred_and_boundary) ... ok
-test_rejection_and_reset (test_laya_shield.TestShield.test_rejection_and_reset) ... ok
-
-----------------------------------------------------------------------
-Ran 6 tests in 0.001s
-
-OK
+[2026-11-16T05:40:20Z] Starting job...
