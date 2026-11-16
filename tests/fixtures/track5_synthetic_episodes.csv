@@ -1,0 +1,13 @@
+method,model_seed,env_seed,crashed,steps,avg_speed,distance,reward,threshold,overrides
+synthetic_dqn,0,100000,0,10,24,240,8,,
+synthetic_dqn,0,100001,1,5,26,130,2,,
+synthetic_dqn,1,100000,0,10,26,260,9,,
+synthetic_dqn,1,100001,1,5,28,140,3,,
+synthetic_shield,0,100000,0,10,20,200,7,0.3,4
+synthetic_shield,0,100001,1,5,22,110,2,0.3,2
+synthetic_shield,1,100000,0,10,22,220,8,0.3,3
+synthetic_shield,1,100001,0,10,24,240,8,0.3,4
+synthetic_shield,0,100000,0,10,23,230,8,0.7,1
+synthetic_shield,0,100001,1,5,25,125,2,0.7,1
+synthetic_shield,1,100000,0,10,25,250,8,0.7,2
+synthetic_shield,1,100001,1,5,27,135,3,0.7,0
