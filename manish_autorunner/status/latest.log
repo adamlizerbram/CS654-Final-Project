@@ -1,42 +1,3 @@
-|    total_timesteps  | 19905    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0996   |
-|    n_updates        | 19704    |
-----------------------------------
-Trained 20,000 steps in 615.0s. Saved models/final/dqn_seed1.zip
-[1/78] READY | method=random model_seed=None threshold=None spec=random
-[2/78] READY | method=dqn model_seed=0 threshold=None spec=agents.dqn_agent:DQNAgent
-[3/78] READY | method=dqn model_seed=1 threshold=None spec=agents.dqn_agent:DQNAgent
-[4/78] READY | method=dqn model_seed=2 threshold=None spec=agents.dqn_agent:DQNAgent
-[5/78] READY | method=dqn model_seed=3 threshold=None spec=agents.dqn_agent:DQNAgent
-[6/78] READY | method=dqn model_seed=4 threshold=None spec=agents.dqn_agent:DQNAgent
-[7/78] READY | method=laya_zeroshot model_seed=None threshold=None spec=agents.laya_agent:LayaAgent
-[8/78] READY | method=laya_finetuned model_seed=None threshold=None spec=agents.laya_agent:LayaAgent
-[9/78] READY | method=shield_zeroshot model_seed=0 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
-[10/78] READY | method=shield_zeroshot model_seed=0 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
-[11/78] READY | method=shield_zeroshot model_seed=0 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
-[12/78] READY | method=shield_zeroshot model_seed=0 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
-[13/78] READY | method=shield_zeroshot model_seed=0 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
-[14/78] READY | method=shield_zeroshot model_seed=0 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
-[15/78] READY | method=shield_zeroshot model_seed=0 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
-[16/78] READY | method=shield_zeroshot model_seed=1 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
-[17/78] READY | method=shield_zeroshot model_seed=1 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
-[18/78] READY | method=shield_zeroshot model_seed=1 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
-[19/78] READY | method=shield_zeroshot model_seed=1 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
-[20/78] READY | method=shield_zeroshot model_seed=1 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
-[21/78] READY | method=shield_zeroshot model_seed=1 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
-[22/78] READY | method=shield_zeroshot model_seed=1 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
-[23/78] READY | method=shield_zeroshot model_seed=2 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
-[24/78] READY | method=shield_zeroshot model_seed=2 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
-[25/78] READY | method=shield_zeroshot model_seed=2 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
-[26/78] READY | method=shield_zeroshot model_seed=2 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
-[27/78] READY | method=shield_zeroshot model_seed=2 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
-[28/78] READY | method=shield_zeroshot model_seed=2 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
-[29/78] READY | method=shield_zeroshot model_seed=2 threshold=0.9 spec=agents.laya_shield:LayaShieldAgent
-[30/78] READY | method=shield_zeroshot model_seed=3 threshold=0.3 spec=agents.laya_shield:LayaShieldAgent
-[31/78] READY | method=shield_zeroshot model_seed=3 threshold=0.4 spec=agents.laya_shield:LayaShieldAgent
-[32/78] READY | method=shield_zeroshot model_seed=3 threshold=0.5 spec=agents.laya_shield:LayaShieldAgent
 [33/78] READY | method=shield_zeroshot model_seed=3 threshold=0.6 spec=agents.laya_shield:LayaShieldAgent
 [34/78] READY | method=shield_zeroshot model_seed=3 threshold=0.7 spec=agents.laya_shield:LayaShieldAgent
 [35/78] READY | method=shield_zeroshot model_seed=3 threshold=0.8 spec=agents.laya_shield:LayaShieldAgent
@@ -398,3 +359,42 @@ Trained 20,000 steps in 615.0s. Saved models/final/dqn_seed1.zip
 [dqn] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=21.36 distance=641.5 reward=22.68
 [dqn] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=22.19 distance=665.6 reward=23.25
 [dqn] episode 11/100 seed=100010 crashed=0 steps=30 avg_speed=24.69 distance=742.3 reward=23.79
+[dqn] episode 12/100 seed=100011 crashed=0 steps=30 avg_speed=24.02 distance=721.9 reward=25.18
+[dqn] episode 13/100 seed=100012 crashed=0 steps=30 avg_speed=21.03 distance=630.3 reward=21.12
+[dqn] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=21.53 distance=648.0 reward=21.22
+[dqn] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=24.50 distance=734.7 reward=23.63
+[dqn] episode 16/100 seed=100015 crashed=0 steps=30 avg_speed=24.03 distance=719.5 reward=24.25
+[dqn] episode 17/100 seed=100016 crashed=0 steps=30 avg_speed=22.36 distance=673.0 reward=21.89
+[dqn] episode 18/100 seed=100017 crashed=0 steps=30 avg_speed=22.03 distance=661.4 reward=21.72
+[dqn] episode 19/100 seed=100018 crashed=0 steps=30 avg_speed=20.86 distance=628.0 reward=22.69
+[dqn] episode 20/100 seed=100019 crashed=0 steps=30 avg_speed=21.86 distance=657.1 reward=23.39
+[dqn] episode 21/100 seed=100020 crashed=0 steps=30 avg_speed=20.36 distance=613.0 reward=21.29
+[dqn] episode 22/100 seed=100021 crashed=0 steps=30 avg_speed=21.69 distance=652.3 reward=21.39
+[dqn] episode 23/100 seed=100022 crashed=0 steps=30 avg_speed=23.86 distance=718.0 reward=25.09
+[dqn] episode 24/100 seed=100023 crashed=0 steps=30 avg_speed=22.53 distance=677.7 reward=24.02
+[dqn] episode 25/100 seed=100024 crashed=1 steps=22 avg_speed=23.70 distance=529.7 reward=17.87
+[dqn] episode 26/100 seed=100025 crashed=0 steps=30 avg_speed=21.69 distance=652.7 reward=23.35
+[dqn] episode 27/100 seed=100026 crashed=0 steps=30 avg_speed=21.03 distance=631.8 reward=20.99
+[dqn] episode 28/100 seed=100027 crashed=0 steps=30 avg_speed=22.69 distance=682.7 reward=24.15
+[dqn] episode 29/100 seed=100028 crashed=0 steps=30 avg_speed=20.69 distance=621.7 reward=22.42
+[dqn] episode 30/100 seed=100029 crashed=0 steps=30 avg_speed=21.69 distance=651.5 reward=22.02
+[dqn] episode 31/100 seed=100030 crashed=0 steps=30 avg_speed=21.53 distance=647.7 reward=23.22
+[dqn] episode 32/100 seed=100031 crashed=0 steps=30 avg_speed=24.34 distance=730.1 reward=23.47
+[dqn] episode 33/100 seed=100032 crashed=0 steps=30 avg_speed=21.19 distance=637.3 reward=22.95
+[dqn] episode 34/100 seed=100033 crashed=0 steps=30 avg_speed=21.36 distance=643.0 reward=23.09
+[dqn] episode 35/100 seed=100034 crashed=0 steps=30 avg_speed=21.03 distance=631.6 reward=20.89
+[dqn] episode 36/100 seed=100035 crashed=0 steps=30 avg_speed=21.03 distance=632.3 reward=22.79
+[dqn] episode 37/100 seed=100036 crashed=0 steps=30 avg_speed=21.19 distance=636.6 reward=21.32
+[dqn] episode 38/100 seed=100037 crashed=0 steps=30 avg_speed=25.19 distance=757.1 reward=25.05
+[dqn] episode 39/100 seed=100038 crashed=0 steps=30 avg_speed=20.86 distance=628.0 reward=22.69
+[dqn] episode 40/100 seed=100039 crashed=0 steps=30 avg_speed=24.50 distance=732.9 reward=24.77
+[dqn] episode 41/100 seed=100040 crashed=0 steps=30 avg_speed=23.69 distance=713.0 reward=24.95
+[dqn] episode 42/100 seed=100041 crashed=0 steps=30 avg_speed=21.53 distance=648.0 reward=21.22
+[dqn] episode 43/100 seed=100042 crashed=0 steps=30 avg_speed=22.19 distance=668.0 reward=23.75
+[dqn] episode 44/100 seed=100043 crashed=0 steps=30 avg_speed=21.03 distance=632.3 reward=20.85
+[dqn] episode 45/100 seed=100044 crashed=1 steps=25 avg_speed=23.15 distance=586.6 reward=19.93
+[dqn] episode 46/100 seed=100045 crashed=0 steps=30 avg_speed=26.36 distance=791.2 reward=25.62
+[dqn] episode 47/100 seed=100046 crashed=0 steps=30 avg_speed=21.36 distance=638.7 reward=21.48
+[dqn] episode 48/100 seed=100047 crashed=0 steps=30 avg_speed=21.36 distance=641.8 reward=22.95
+[dqn] episode 49/100 seed=100048 crashed=0 steps=30 avg_speed=22.19 distance=667.7 reward=23.75
+[dqn] episode 50/100 seed=100049 crashed=0 steps=30 avg_speed=22.02 distance=660.9 reward=21.72
