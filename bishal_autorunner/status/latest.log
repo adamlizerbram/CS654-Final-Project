@@ -1,1 +1,50 @@
-[2026-11-16T06:52:39Z] Starting job...
+Runner revision: 099e22501c2f35b060a62500d7a45aff8fb66792
+From github.com:adamlizerbram/CS654-Final-Project
+ * branch            codex/track5-laya-threshold-analysis -> FETCH_HEAD
+ * [new branch]      codex/track5-laya-threshold-analysis -> origin/codex/track5-laya-threshold-analysis
+/home/jovyan/CS654-Track5-Runner/models/final/laya-highway/model.safetensors: OK
+Source revision: 9bd061a8a0b1a05b31ca6c76e270518f3b90e88c
+Fine-tuned source: /home/jovyan/CS654-Track5-Runner/models/final/laya-highway
+test_csv_and_figures (test_track5_threshold_analysis.TestThresholdAnalysis.test_csv_and_figures) ... ok
+test_threshold_boundary_and_percentages (test_track5_threshold_analysis.TestThresholdAnalysis.test_threshold_boundary_and_percentages) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.782s
+
+OK
+/home/jovyan/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/laya/agent.py:2259: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
+  return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
+model=zero-shot seed=100000 action=IDLE score=0.897600
+model=zero-shot seed=100000 action=LANE_RIGHT score=0.850800
+model=zero-shot seed=100000 action=FASTER score=0.887400
+model=zero-shot seed=100000 action=SLOWER score=0.207700
+model=zero-shot seed=100001 action=LANE_LEFT score=0.749000
+model=zero-shot seed=100001 action=IDLE score=0.874600
+model=zero-shot seed=100001 action=LANE_RIGHT score=0.618300
+model=zero-shot seed=100001 action=FASTER score=0.770500
+model=zero-shot seed=100001 action=SLOWER score=0.233600
+model=zero-shot seed=100002 action=LANE_LEFT score=0.796200
+model=zero-shot seed=100002 action=IDLE score=0.894600
+model=zero-shot seed=100002 action=LANE_RIGHT score=0.796900
+model=zero-shot seed=100002 action=FASTER score=0.760300
+model=zero-shot seed=100002 action=SLOWER score=0.220200
+model=fine-tuned seed=100000 action=IDLE score=0.031400
+model=fine-tuned seed=100000 action=LANE_RIGHT score=0.031200
+model=fine-tuned seed=100000 action=FASTER score=0.961300
+model=fine-tuned seed=100000 action=SLOWER score=0.022100
+model=fine-tuned seed=100001 action=LANE_LEFT score=0.025100
+model=fine-tuned seed=100001 action=IDLE score=0.022900
+model=fine-tuned seed=100001 action=LANE_RIGHT score=0.972700
+model=fine-tuned seed=100001 action=FASTER score=0.023600
+model=fine-tuned seed=100001 action=SLOWER score=0.021900
+model=fine-tuned seed=100002 action=LANE_LEFT score=0.026000
+model=fine-tuned seed=100002 action=IDLE score=0.022000
+model=fine-tuned seed=100002 action=LANE_RIGHT score=0.029600
+model=fine-tuned seed=100002 action=FASTER score=0.022600
+model=fine-tuned seed=100002 action=SLOWER score=0.020400
+Wrote 28 model/action scores and 252 threshold rows to results/track5/threshold_analysis/action_thresholds.csv
+zero-shot accepted percentages: 0.01=0.0%, 0.05=0.0%, 0.1=0.0%, 0.3=21.4%, 0.5=21.4%, 0.7=28.6%, 0.9=100.0%, 0.95=100.0%, 0.99=100.0%
+fine-tuned accepted percentages: 0.01=0.0%, 0.05=85.7%, 0.1=85.7%, 0.3=85.7%, 0.5=85.7%, 0.7=85.7%, 0.9=85.7%, 0.95=85.7%, 0.99=100.0%
+Analysis artifact: /home/jovyan/CS654-Track5-Runner/bishal_autorunner/status/track5_9bd061a8a0b1a05b31ca6c76e270518f3b90e88c_action_thresholds.csv
+Analysis artifact: /home/jovyan/CS654-Track5-Runner/bishal_autorunner/status/track5_9bd061a8a0b1a05b31ca6c76e270518f3b90e88c_unsafe_score_distribution.png
+Analysis artifact: /home/jovyan/CS654-Track5-Runner/bishal_autorunner/status/track5_9bd061a8a0b1a05b31ca6c76e270518f3b90e88c_threshold_acceptance.png
