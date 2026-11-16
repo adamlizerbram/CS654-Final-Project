@@ -1,0 +1,4 @@
+data_type,threshold,dqn_preferred_action,shield_selected_action,override,all_unsafe_fallback
+MOCK / SYNTHETIC,0.05,LANE_RIGHT,IDLE,True,True
+MOCK / SYNTHETIC,0.5,LANE_RIGHT,LANE_LEFT,True,False
+MOCK / SYNTHETIC,0.9,LANE_RIGHT,LANE_RIGHT,False,False

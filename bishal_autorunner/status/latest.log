@@ -1,1 +1,35 @@
-[2026-11-16T05:40:20Z] Starting job...
+Runner revision: 1cbd87540cde7cd1c6ca3f7fb2a6ccbc9b5c39e7
+From github.com:adamlizerbram/CS654-Final-Project
+ * branch            feat/track5-safety-shield -> FETCH_HEAD
+   313a3c9..e60c15e  feat/track5-safety-shield -> origin/feat/track5-safety-shield
+Source revision: e60c15e3b320809936ed3a7080da5054b8427c2c
+test_csv_png_and_no_overwrite (test_shield_demo.TestShieldDemo.test_csv_png_and_no_overwrite) ... ok
+test_expected_actual_shield_decisions (test_shield_demo.TestShieldDemo.test_expected_actual_shield_decisions) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 3.930s
+
+OK
+test_all_unsafe_lowest_risk_and_tie_rank (test_laya_shield.TestShield.test_all_unsafe_lowest_risk_and_tie_rank) ... ok
+test_evaluator_resets_and_records_overrides (test_laya_shield.TestShield.test_evaluator_resets_and_records_overrides) ... ok
+test_invalid_inputs (test_laya_shield.TestShield.test_invalid_inputs) ... ok
+test_legal_filter_and_ties (test_laya_shield.TestShield.test_legal_filter_and_ties) ... ok
+test_preferred_and_boundary (test_laya_shield.TestShield.test_preferred_and_boundary) ... ok
+test_rejection_and_reset (test_laya_shield.TestShield.test_rejection_and_reset) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK
+MOCK / SYNTHETIC — illustrative values, not model predictions
+DQN preferred: LANE_RIGHT (2), Q=5.00
+Candidates (action id, name, Q-value, unsafe score):
+  2 LANE_RIGHT Q=5.00 risk=0.85
+  0 LANE_LEFT  Q=4.00 risk=0.20
+  1 IDLE       Q=3.00 risk=0.10
+threshold=0.05 | selected=IDLE | override=True | all-unsafe fallback=True
+threshold=0.50 | selected=LANE_LEFT | override=True | all-unsafe fallback=False
+threshold=0.90 | selected=LANE_RIGHT | override=False | all-unsafe fallback=False
+Wrote MOCK / SYNTHETIC outputs: results/track5/mock_synthetic_shield_decisions.csv, results/track5/mock_synthetic_shield_decisions.png
+MOCK / SYNTHETIC artifact: /home/jovyan/CS654-Track5-Runner/bishal_autorunner/status/mock_synthetic_shield_e60c15e.csv
+MOCK / SYNTHETIC artifact: /home/jovyan/CS654-Track5-Runner/bishal_autorunner/status/mock_synthetic_shield_e60c15e.png
