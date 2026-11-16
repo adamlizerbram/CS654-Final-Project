@@ -1,51 +1,3 @@
-| time/               |          |
-|    episodes         | 650      |
-|    fps              | 32       |
-|    time_elapsed     | 376      |
-|    total_timesteps  | 12237    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.116    |
-|    n_updates        | 12036    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 24.1     |
-|    ep_rew_mean      | 18.9     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 700      |
-|    fps              | 33       |
-|    time_elapsed     | 380      |
-|    total_timesteps  | 12625    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.113    |
-|    n_updates        | 12424    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 22.7     |
-|    ep_rew_mean      | 18       |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 650      |
-|    fps              | 33       |
-|    time_elapsed     | 401      |
-|    total_timesteps  | 13257    |
-| train/              |          |
-|    learning_rate    | 0.0005   |
-|    loss             | 0.0173   |
-|    n_updates        | 13056    |
-----------------------------------
-----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 25.6     |
-|    ep_rew_mean      | 20.2     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 700      |
-|    fps              | 32       |
 |    time_elapsed     | 404      |
 |    total_timesteps  | 13308    |
 | train/              |          |
@@ -398,3 +350,51 @@
 |    loss             | 0.00982  |
 |    n_updates        | 18567    |
 ----------------------------------
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 23.6     |
+|    ep_rew_mean      | 18.6     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 900      |
+|    fps              | 33       |
+|    time_elapsed     | 578      |
+|    total_timesteps  | 19101    |
+| train/              |          |
+|    learning_rate    | 0.0005   |
+|    loss             | 0.119    |
+|    n_updates        | 18900    |
+----------------------------------
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 22.8     |
+|    ep_rew_mean      | 18.5     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 1000     |
+|    fps              | 32       |
+|    time_elapsed     | 581      |
+|    total_timesteps  | 19044    |
+| train/              |          |
+|    learning_rate    | 0.0005   |
+|    loss             | 0.0834   |
+|    n_updates        | 18843    |
+----------------------------------
+Trained 20,000 steps in 602.8s. Saved models/final/dqn_seed0.zip
+Trained 20,000 steps in 605.5s. Saved models/final/dqn_seed2.zip
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 26.7     |
+|    ep_rew_mean      | 20.9     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 950      |
+|    fps              | 32       |
+|    time_elapsed     | 607      |
+|    total_timesteps  | 19984    |
+| train/              |          |
+|    learning_rate    | 0.0005   |
+|    loss             | 0.00585  |
+|    n_updates        | 19783    |
+----------------------------------
+Trained 20,000 steps in 608.3s. Saved models/final/dqn_seed3.zip
