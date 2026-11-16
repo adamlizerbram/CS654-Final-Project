@@ -1,1 +1,20 @@
-[2026-11-16T23:24:52Z] Starting job...
+Training DQN seed 0...
+Training DQN seed 1...
+Training DQN seed 2...
+Training DQN seed 3...
+Training DQN seed 4...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Using cpu device
+Using cpu device
+Using cpu device
+Wrapping the env with a `Monitor` wrapperUsing cpu device
+
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Wrapping the env in a DummyVecEnv.
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
