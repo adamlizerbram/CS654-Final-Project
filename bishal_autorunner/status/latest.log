@@ -1,16 +1,1 @@
-Track 5 synthetic plotting validation
-Source revision: f102194ac5300f425489237fc319bbe9c7679459
-test_cli_generates_figure (test_track5_figures.TestTrack5SyntheticFigures.test_cli_generates_figure) ... Wrote SYNTHETIC demonstration plot to /tmp/tmpkkdlw3c4/nested/synthetic.png
-ok
-test_existing_output_is_not_overwritten (test_track5_figures.TestTrack5SyntheticFigures.test_existing_output_is_not_overwritten) ... ok
-test_fixture_matches_shared_schema (test_track5_figures.TestTrack5SyntheticFigures.test_fixture_matches_shared_schema) ... ok
-test_groups_by_method_and_threshold (test_track5_figures.TestTrack5SyntheticFigures.test_groups_by_method_and_threshold) ... ok
-test_rejects_non_png_output (test_track5_figures.TestTrack5SyntheticFigures.test_rejects_non_png_output) ... ok
-test_rejects_wrong_schema_empty_data_and_unlabeled_data (test_track5_figures.TestTrack5SyntheticFigures.test_rejects_wrong_schema_empty_data_and_unlabeled_data) ... ok
-test_unshielded_fields_stay_blank (test_track5_figures.TestTrack5SyntheticFigures.test_unshielded_fields_stay_blank) ... ok
-
-----------------------------------------------------------------------
-Ran 7 tests in 1.321s
-
-OK
-Wrote SYNTHETIC demonstration plot to results/track5_synthetic_crash_speed.png
+[2026-11-16T05:25:02Z] Starting job...
