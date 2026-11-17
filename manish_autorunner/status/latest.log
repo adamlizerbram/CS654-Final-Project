@@ -1,21 +1,3 @@
-[shield_finetuned] episode 92/100 seed=100091 crashed=0 steps=30 avg_speed=22.86 distance=688.0 reward=22.29
-[shield_finetuned] episode 93/100 seed=100092 crashed=0 steps=30 avg_speed=28.17 distance=845.3 reward=28.54
-[shield_finetuned] episode 94/100 seed=100093 crashed=0 steps=30 avg_speed=22.69 distance=682.3 reward=23.39
-[shield_finetuned] episode 95/100 seed=100094 crashed=0 steps=30 avg_speed=20.36 distance=612.3 reward=21.62
-[shield_finetuned] episode 96/100 seed=100095 crashed=0 steps=30 avg_speed=22.36 distance=672.3 reward=22.02
-[shield_finetuned] episode 97/100 seed=100096 crashed=0 steps=30 avg_speed=21.36 distance=642.0 reward=23.05
-[shield_finetuned] episode 98/100 seed=100097 crashed=0 steps=30 avg_speed=21.03 distance=632.7 reward=22.79
-[shield_finetuned] episode 99/100 seed=100098 crashed=0 steps=30 avg_speed=22.67 distance=680.4 reward=22.14
-[shield_finetuned] episode 100/100 seed=100099 crashed=0 steps=30 avg_speed=22.86 distance=688.0 reward=24.29
-[59/70] Running shield_finetuned (model_seed=3, threshold=0.5) for 100 episode(s)...
-[shield_finetuned] episode 1/100 seed=100000 crashed=0 steps=30 avg_speed=22.19 distance=667.3 reward=23.72
-[shield_finetuned] episode 2/100 seed=100001 crashed=0 steps=30 avg_speed=22.36 distance=671.7 reward=23.12
-[shield_finetuned] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=20.19 distance=603.2 reward=21.92
-[shield_finetuned] episode 4/100 seed=100003 crashed=0 steps=30 avg_speed=22.52 distance=675.7 reward=22.98
-[shield_finetuned] episode 5/100 seed=100004 crashed=0 steps=30 avg_speed=21.00 distance=630.4 reward=22.80
-[shield_finetuned] episode 6/100 seed=100005 crashed=0 steps=30 avg_speed=24.00 distance=720.4 reward=25.20
-[shield_finetuned] episode 7/100 seed=100006 crashed=0 steps=30 avg_speed=21.53 distance=647.1 reward=22.05
-[shield_finetuned] episode 8/100 seed=100007 crashed=0 steps=30 avg_speed=21.52 distance=647.3 reward=23.19
 [shield_finetuned] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=21.36 distance=642.3 reward=22.92
 [shield_finetuned] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=21.69 distance=652.7 reward=23.35
 [shield_finetuned] episode 11/100 seed=100010 crashed=0 steps=30 avg_speed=22.00 distance=657.3 reward=22.83
@@ -398,3 +380,21 @@
 [shield_finetuned] episode 85/100 seed=100084 crashed=0 steps=30 avg_speed=20.53 distance=617.7 reward=22.42
 [shield_finetuned] episode 86/100 seed=100085 crashed=0 steps=30 avg_speed=21.02 distance=632.0 reward=22.78
 [shield_finetuned] episode 87/100 seed=100086 crashed=0 steps=30 avg_speed=22.69 distance=683.0 reward=22.15
+[shield_finetuned] episode 88/100 seed=100087 crashed=0 steps=30 avg_speed=21.52 distance=647.2 reward=23.05
+[shield_finetuned] episode 89/100 seed=100088 crashed=0 steps=30 avg_speed=21.86 distance=658.0 reward=23.49
+[shield_finetuned] episode 90/100 seed=100089 crashed=0 steps=30 avg_speed=23.86 distance=718.0 reward=25.09
+[shield_finetuned] episode 91/100 seed=100090 crashed=0 steps=30 avg_speed=23.02 distance=691.5 reward=23.82
+[shield_finetuned] episode 92/100 seed=100091 crashed=0 steps=30 avg_speed=22.86 distance=688.0 reward=22.29
+[shield_finetuned] episode 93/100 seed=100092 crashed=0 steps=30 avg_speed=28.17 distance=845.3 reward=28.54
+[shield_finetuned] episode 94/100 seed=100093 crashed=0 steps=30 avg_speed=22.69 distance=682.3 reward=23.39
+[shield_finetuned] episode 95/100 seed=100094 crashed=0 steps=30 avg_speed=20.36 distance=612.3 reward=21.62
+[shield_finetuned] episode 96/100 seed=100095 crashed=0 steps=30 avg_speed=22.36 distance=672.3 reward=22.02
+[shield_finetuned] episode 97/100 seed=100096 crashed=0 steps=30 avg_speed=21.36 distance=642.0 reward=23.05
+[shield_finetuned] episode 98/100 seed=100097 crashed=0 steps=30 avg_speed=21.03 distance=632.7 reward=22.79
+[shield_finetuned] episode 99/100 seed=100098 crashed=0 steps=30 avg_speed=22.67 distance=680.4 reward=22.14
+[shield_finetuned] episode 100/100 seed=100099 crashed=0 steps=30 avg_speed=22.86 distance=688.0 reward=24.29
+[63/70] Running shield_finetuned (model_seed=3, threshold=0.9) for 100 episode(s)...
+[shield_finetuned] episode 1/100 seed=100000 crashed=0 steps=30 avg_speed=22.19 distance=667.3 reward=23.72
+[shield_finetuned] episode 2/100 seed=100001 crashed=0 steps=30 avg_speed=22.36 distance=671.7 reward=23.12
+[shield_finetuned] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=20.19 distance=603.2 reward=21.92
+[shield_finetuned] episode 4/100 seed=100003 crashed=0 steps=30 avg_speed=22.52 distance=675.7 reward=22.98
