@@ -1,16 +1,3 @@
-[dqn] episode 48/100 seed=100047 crashed=1 steps=11 avg_speed=25.42 distance=285.5 reward=8.93
-[dqn] episode 49/100 seed=100048 crashed=1 steps=9 avg_speed=27.78 distance=253.7 reward=7.80
-[dqn] episode 50/100 seed=100049 crashed=1 steps=29 avg_speed=24.18 distance=707.2 reward=22.90
-[dqn] episode 51/100 seed=100050 crashed=0 steps=30 avg_speed=26.33 distance=787.6 reward=25.86
-[dqn] episode 52/100 seed=100051 crashed=0 steps=30 avg_speed=24.81 distance=740.5 reward=25.51
-[dqn] episode 53/100 seed=100052 crashed=1 steps=23 avg_speed=25.23 distance=587.0 reward=18.96
-[dqn] episode 54/100 seed=100053 crashed=0 steps=30 avg_speed=27.33 distance=815.3 reward=26.86
-[dqn] episode 55/100 seed=100054 crashed=0 steps=30 avg_speed=25.86 distance=775.7 reward=25.72
-[dqn] episode 56/100 seed=100055 crashed=1 steps=10 avg_speed=25.02 distance=257.6 reward=8.00
-[dqn] episode 57/100 seed=100056 crashed=0 steps=30 avg_speed=25.34 distance=757.6 reward=25.00
-[dqn] episode 58/100 seed=100057 crashed=0 steps=30 avg_speed=26.19 distance=786.5 reward=25.35
-[dqn] episode 59/100 seed=100058 crashed=1 steps=24 avg_speed=26.25 distance=630.9 reward=19.83
-[dqn] episode 60/100 seed=100059 crashed=1 steps=14 avg_speed=24.03 distance=344.6 reward=10.40
 [dqn] episode 61/100 seed=100060 crashed=0 steps=30 avg_speed=26.64 distance=793.8 reward=25.64
 [dqn] episode 62/100 seed=100061 crashed=1 steps=7 avg_speed=25.41 distance=185.9 reward=5.60
 [dqn] episode 63/100 seed=100062 crashed=1 steps=12 avg_speed=25.72 distance=315.9 reward=9.85
@@ -398,3 +385,16 @@ Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1535.14
 /home/jovyan/RL/CS654-Final-Project/.conda/cs654/lib/python3.11/site-packages/laya/agent.py:2259: RuntimeWarning: laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated.
   return Agent(model_id_or_path, device=device, token=token, subfolder=subfolder, fast=fast,
 [shield_zeroshot] episode 1/100 seed=100000 crashed=1 steps=12 avg_speed=20.92 distance=259.3 reward=8.28
+[shield_zeroshot] episode 2/100 seed=100001 crashed=0 steps=30 avg_speed=21.52 distance=642.8 reward=22.21
+[shield_zeroshot] episode 3/100 seed=100002 crashed=1 steps=19 avg_speed=21.63 distance=419.4 reward=13.15
+[shield_zeroshot] episode 4/100 seed=100003 crashed=1 steps=10 avg_speed=21.00 distance=213.4 reward=6.75
+[shield_zeroshot] episode 5/100 seed=100004 crashed=1 steps=24 avg_speed=22.09 distance=528.8 reward=17.93
+[shield_zeroshot] episode 6/100 seed=100005 crashed=0 steps=30 avg_speed=22.17 distance=664.0 reward=23.67
+[shield_zeroshot] episode 7/100 seed=100006 crashed=1 steps=8 avg_speed=20.56 distance=172.2 reward=5.30
+[shield_zeroshot] episode 8/100 seed=100007 crashed=1 steps=8 avg_speed=21.35 distance=178.7 reward=5.08
+[shield_zeroshot] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=21.67 distance=647.0 reward=22.83
+[shield_zeroshot] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=21.19 distance=632.6 reward=22.68
+[shield_zeroshot] episode 11/100 seed=100010 crashed=1 steps=15 avg_speed=20.72 distance=315.6 reward=10.38
+[shield_zeroshot] episode 12/100 seed=100011 crashed=1 steps=16 avg_speed=21.16 distance=345.1 reward=11.18
+[shield_zeroshot] episode 13/100 seed=100012 crashed=1 steps=18 avg_speed=21.46 distance=393.1 reward=13.13
+[shield_zeroshot] episode 14/100 seed=100013 crashed=1 steps=20 avg_speed=21.18 distance=429.7 reward=14.62
