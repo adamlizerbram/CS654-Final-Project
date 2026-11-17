@@ -2,32 +2,34 @@ set -euo pipefail
 unset SDL_VIDEODRIVER || true
 unset SDL_AUDIODRIVER || true
 
-# 1. Ensure fine-tuned Laya weights exist
-if [ ! -d "models/final/laya-highway" ]; then
-  mkdir -p models/final
-  hf download adamlizerbram/cs654-final-project --include "laya-highway/*" --local-dir models/final
-fi
+# 1. Download exact shared weights (DQN seeds 0..4 + fine-tuned Laya) from Hugging Face
+mkdir -p models/final
+hf download adamlizerbram/cs654-final-project \
+  --include "dqn_seed*.zip" "laya-highway/*" \
+  --local-dir models/final
 
-# 2. Train any missing DQN seed checkpoints (0..4) in parallel
-pids=()
-for seed in 0 1 2 3 4; do
-  if [ ! -f "models/final/dqn_seed${seed}.zip" ]; then
-    echo "Training DQN seed ${seed}..."
-    python -m agents.train_dqn --seed "${seed}" &
-    pids+=($!)
-  fi
-done
-for pid in "${pids[@]+"${pids[@]}"}"; do
-  wait "$pid"
-done
+# 2. Drop any previous locally-trained dqn/shield rows while keeping random/laya_* rows
+python - << 'EOF'
+import csv
+from pathlib import Path
+from eval.results_schema import COLUMNS
 
-# 3. Preview readiness (all 78 jobs should now be READY)
-python -m eval.run_benchmark --dry-run
+raw_path = Path("results/raw_episodes.csv")
+if raw_path.exists():
+    keep = {"random", "laya_zeroshot", "laya_finetuned"}
+    with raw_path.open("r", newline="", encoding="utf-8") as f:
+        rows = [r for r in csv.DictReader(f) if r.get("method") in keep]
+    with raw_path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+    print(f"Kept {len(rows)} non-DQN baseline rows in {raw_path}")
+EOF
 
-# 4. Run 5-seed DQN baseline (500 episodes total)
+# 3. Run 5-seed DQN baseline using Noah's Hugging Face checkpoints
 python -m eval.run_benchmark --only dqn --episodes 100 --skip-existing
 
-# 5. Record quick 1-episode vertical demo clips of DQN and shielded DQN
+# 4. Record 1-episode vertical demo clips of Noah's DQN and shielded DQN
 rm -rf manish_autorunner/status/clips
 mkdir -p manish_autorunner/status/clips
 python -m eval.evaluate \
@@ -51,5 +53,5 @@ python -m eval.evaluate \
   --video-episodes 1 \
   --video-vertical
 
-# 6. Run full shield sweeps (checkpoints after every job via --skip-existing)
+# 5. Run full shield sweeps on Noah's exact DQN checkpoints
 python -m eval.run_benchmark --only shield_finetuned shield_zeroshot --episodes 100 --skip-existing
