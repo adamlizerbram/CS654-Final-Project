@@ -33,9 +33,9 @@ def plot_crash_vs_speed(
 
     by_key = {(r["method"], r["threshold"]): r for r in rows}
     points = [
-        ("random", "", "Random", "#7f8c8d", "x", (-10, -14)),
-        ("laya_zeroshot", "", "Laya (Zero-Shot)", "#d62728", "s", (-22, -16)),
-        ("laya_finetuned", "", "Laya (Fine-Tuned)", "#1f77b4", "^", (-18, 10)),
+        ("random", "", "Random", "#7f8c8d", "x", (10, -6)),
+        ("laya_zeroshot", "", "Laya (Zero-Shot)", "#d62728", "s", (-112, -6)),
+        ("laya_finetuned", "", "Laya (Fine-Tuned)", "#1f77b4", "^", (-118, -22)),
         ("dqn", "", "DQN Alone", "#0ea5e9", "D", (8, 8)),
         ("shield_zeroshot", "0.7", "Shield (Zero-Shot, thr=0.7)", "#ff7f0e", "v", (8, -4)),
         ("shield_finetuned", "0.5", "Shield (Fine-Tuned, thr=0.5)", "#2ca02c", "o", (8, 8)),
