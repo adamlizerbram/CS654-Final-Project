@@ -1,1 +1,47 @@
-[2026-11-17T00:51:19Z] Starting job...
+
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]
+Fetching 14 files:   7%|▋         | 1/14 [00:00<00:03,  3.34it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 14 files:  21%|██▏       | 3/14 [00:00<00:01,  6.62it/s]
+Fetching 14 files:  36%|███▌      | 5/14 [00:00<00:01,  8.96it/s]
+Fetching 14 files:  57%|█████▋    | 8/14 [00:00<00:00, 11.81it/s]
+Fetching 14 files:  71%|███████▏  | 10/14 [00:02<00:01,  3.53it/s]
+Fetching 14 files:  79%|███████▊  | 11/14 [00:02<00:00,  3.79it/s]
+Fetching 14 files:  86%|████████▌ | 12/14 [00:02<00:00,  3.95it/s]
+Fetching 14 files:  93%|█████████▎| 13/14 [00:02<00:00,  4.08it/s]
+Fetching 14 files: 100%|██████████| 14/14 [00:03<00:00,  3.73it/s]
+Fetching 14 files: 100%|██████████| 14/14 [00:03<00:00,  4.46it/s]
+[32m✓ Downloaded[0m
+  path: /home/jovyan/RL/CS654-Final-Project/models/final
+Kept 300 non-DQN baseline rows in results/raw_episodes.csv
+[1/5] Running dqn (model_seed=0, threshold=None) for 100 episode(s)...
+[dqn] episode 1/100 seed=100000 crashed=0 steps=30 avg_speed=22.53 distance=677.3 reward=23.99
+[dqn] episode 2/100 seed=100001 crashed=1 steps=7 avg_speed=25.54 distance=185.7 reward=5.23
+[dqn] episode 3/100 seed=100002 crashed=0 steps=30 avg_speed=25.19 distance=755.8 reward=25.05
+[dqn] episode 4/100 seed=100003 crashed=0 steps=30 avg_speed=23.02 distance=689.5 reward=23.48
+[dqn] episode 5/100 seed=100004 crashed=0 steps=30 avg_speed=24.03 distance=721.4 reward=24.49
+[dqn] episode 6/100 seed=100005 crashed=0 steps=30 avg_speed=23.84 distance=715.4 reward=25.07
+[dqn] episode 7/100 seed=100006 crashed=0 steps=30 avg_speed=22.03 distance=661.6 reward=23.45
+[dqn] episode 8/100 seed=100007 crashed=1 steps=17 avg_speed=22.62 distance=392.0 reward=13.13
+[dqn] episode 9/100 seed=100008 crashed=0 steps=30 avg_speed=23.02 distance=691.4 reward=23.98
+[dqn] episode 10/100 seed=100009 crashed=0 steps=30 avg_speed=21.69 distance=652.7 reward=23.35
+[dqn] episode 11/100 seed=100010 crashed=1 steps=21 avg_speed=26.56 distance=564.7 reward=17.90
+[dqn] episode 12/100 seed=100011 crashed=0 steps=30 avg_speed=24.36 distance=731.9 reward=25.45
+[dqn] episode 13/100 seed=100012 crashed=0 steps=30 avg_speed=22.00 distance=657.1 reward=22.60
+[dqn] episode 14/100 seed=100013 crashed=0 steps=30 avg_speed=23.69 distance=709.0 reward=24.12
+[dqn] episode 15/100 seed=100014 crashed=0 steps=30 avg_speed=24.53 distance=737.4 reward=25.12
+[dqn] episode 16/100 seed=100015 crashed=0 steps=30 avg_speed=25.03 distance=751.0 reward=25.28
+[dqn] episode 17/100 seed=100016 crashed=0 steps=30 avg_speed=22.19 distance=668.0 reward=21.75
+[dqn] episode 18/100 seed=100017 crashed=1 steps=12 avg_speed=23.90 distance=292.3 reward=9.49
+[dqn] episode 19/100 seed=100018 crashed=0 steps=30 avg_speed=21.33 distance=639.2 reward=22.10
+[dqn] episode 20/100 seed=100019 crashed=0 steps=30 avg_speed=21.86 distance=658.0 reward=23.49
+[dqn] episode 21/100 seed=100020 crashed=0 steps=30 avg_speed=20.69 distance=621.8 reward=21.52
+[dqn] episode 22/100 seed=100021 crashed=0 steps=30 avg_speed=23.67 distance=706.8 reward=24.10
+[dqn] episode 23/100 seed=100022 crashed=0 steps=30 avg_speed=24.17 distance=724.1 reward=24.97
+[dqn] episode 24/100 seed=100023 crashed=1 steps=21 avg_speed=27.99 distance=594.9 reward=19.10
+[dqn] episode 25/100 seed=100024 crashed=1 steps=13 avg_speed=27.04 distance=360.2 reward=11.48
+[dqn] episode 26/100 seed=100025 crashed=0 steps=30 avg_speed=25.19 distance=756.8 reward=25.32
+[dqn] episode 27/100 seed=100026 crashed=0 steps=30 avg_speed=23.03 distance=690.1 reward=23.52
+[dqn] episode 28/100 seed=100027 crashed=0 steps=30 avg_speed=22.19 distance=664.0 reward=22.72
+[dqn] episode 29/100 seed=100028 crashed=0 steps=30 avg_speed=20.53 distance=618.0 reward=22.42
+[dqn] episode 30/100 seed=100029 crashed=0 steps=30 avg_speed=21.03 distance=630.1 reward=21.35
