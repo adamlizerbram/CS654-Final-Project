@@ -4,9 +4,7 @@ unset SDL_AUDIODRIVER || true
 
 # 1. Download exact shared weights (DQN seeds 0..4 + fine-tuned Laya) from Hugging Face
 mkdir -p models/final
-hf download adamlizerbram/cs654-final-project \
-  --include "dqn_seed*.zip" "laya-highway/*" \
-  --local-dir models/final
+hf download adamlizerbram/cs654-final-project --local-dir models/final
 
 # 2. Drop any previous locally-trained dqn/shield rows while keeping random/laya_* rows
 python - << 'EOF'
