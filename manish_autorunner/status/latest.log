@@ -1,17 +1,3 @@
-[shield_zeroshot] episode 85/100 seed=100084 crashed=1 steps=29 avg_speed=23.40 distance=684.3 reward=21.61
-[shield_zeroshot] episode 86/100 seed=100085 crashed=1 steps=12 avg_speed=22.99 distance=282.1 reward=9.12
-[shield_zeroshot] episode 87/100 seed=100086 crashed=0 steps=30 avg_speed=22.36 distance=668.7 reward=22.55
-[shield_zeroshot] episode 88/100 seed=100087 crashed=0 steps=30 avg_speed=21.69 distance=649.8 reward=22.98
-[shield_zeroshot] episode 89/100 seed=100088 crashed=1 steps=21 avg_speed=22.83 distance=487.8 reward=16.60
-[shield_zeroshot] episode 90/100 seed=100089 crashed=1 steps=22 avg_speed=25.95 distance=578.5 reward=19.08
-[shield_zeroshot] episode 91/100 seed=100090 crashed=1 steps=26 avg_speed=23.12 distance=607.7 reward=20.01
-[shield_zeroshot] episode 92/100 seed=100091 crashed=1 steps=29 avg_speed=23.49 distance=687.2 reward=22.26
-[shield_zeroshot] episode 93/100 seed=100092 crashed=0 steps=30 avg_speed=27.83 distance=834.7 reward=28.26
-[shield_zeroshot] episode 94/100 seed=100093 crashed=0 steps=30 avg_speed=23.17 distance=692.4 reward=23.90
-[shield_zeroshot] episode 95/100 seed=100094 crashed=1 steps=12 avg_speed=24.58 distance=293.7 reward=8.83
-[shield_zeroshot] episode 96/100 seed=100095 crashed=0 steps=30 avg_speed=23.98 distance=715.4 reward=24.71
-[shield_zeroshot] episode 97/100 seed=100096 crashed=0 steps=30 avg_speed=21.50 distance=642.8 reward=22.80
-[shield_zeroshot] episode 98/100 seed=100097 crashed=1 steps=29 avg_speed=21.58 distance=629.2 reward=21.68
 [shield_zeroshot] episode 99/100 seed=100098 crashed=1 steps=27 avg_speed=23.68 distance=645.6 reward=21.36
 [shield_zeroshot] episode 100/100 seed=100099 crashed=1 steps=8 avg_speed=25.45 distance=211.0 reward=6.52
 [22/70] Running shield_zeroshot (model_seed=3, threshold=0.3) for 100 episode(s)...
@@ -398,3 +384,17 @@ Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1782.84
 [shield_zeroshot] episode 58/100 seed=100057 crashed=1 steps=8 avg_speed=20.13 distance=168.6 reward=5.22
 [shield_zeroshot] episode 59/100 seed=100058 crashed=1 steps=11 avg_speed=23.63 distance=263.7 reward=8.05
 [shield_zeroshot] episode 60/100 seed=100059 crashed=1 steps=8 avg_speed=20.76 distance=174.3 reward=5.18
+[shield_zeroshot] episode 61/100 seed=100060 crashed=1 steps=23 avg_speed=21.09 distance=480.6 reward=16.40
+[shield_zeroshot] episode 62/100 seed=100061 crashed=0 steps=30 avg_speed=22.00 distance=658.1 reward=23.43
+[shield_zeroshot] episode 63/100 seed=100062 crashed=1 steps=9 avg_speed=20.55 distance=188.0 reward=5.92
+[shield_zeroshot] episode 64/100 seed=100063 crashed=0 steps=30 avg_speed=21.69 distance=650.1 reward=23.12
+[shield_zeroshot] episode 65/100 seed=100064 crashed=1 steps=7 avg_speed=20.15 distance=149.8 reward=4.58
+[shield_zeroshot] episode 66/100 seed=100065 crashed=1 steps=10 avg_speed=21.50 distance=219.1 reward=6.98
+[shield_zeroshot] episode 67/100 seed=100066 crashed=0 steps=30 avg_speed=21.69 distance=649.2 reward=22.65
+[shield_zeroshot] episode 68/100 seed=100067 crashed=1 steps=17 avg_speed=22.36 distance=379.9 reward=12.33
+[shield_zeroshot] episode 69/100 seed=100068 crashed=1 steps=23 avg_speed=21.35 distance=498.6 reward=16.28
+[shield_zeroshot] episode 70/100 seed=100069 crashed=0 steps=30 avg_speed=21.19 distance=632.3 reward=22.54
+[shield_zeroshot] episode 71/100 seed=100070 crashed=1 steps=23 avg_speed=21.93 distance=512.9 reward=17.67
+[shield_zeroshot] episode 72/100 seed=100071 crashed=1 steps=25 avg_speed=22.20 distance=554.0 reward=18.37
+[shield_zeroshot] episode 73/100 seed=100072 crashed=1 steps=21 avg_speed=21.64 distance=462.6 reward=15.77
+[shield_zeroshot] episode 74/100 seed=100073 crashed=0 steps=30 avg_speed=21.17 distance=633.9 reward=22.53
