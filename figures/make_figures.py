@@ -9,7 +9,8 @@ from __future__ import annotations
 import importlib
 
 MODULES = [
-    "figures.calibration",  # Track 4
+    "figures.calibration",      # Track 4
+    "figures.benchmark_plots",  # Track 1
 ]
 
 
